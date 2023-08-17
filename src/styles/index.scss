@@ -1,10 +1,9 @@
 @import "./_fonts.scss";
 @import "./_variables.scss";
+@import "./_mixins.scss";
 
 :root {
-  font-family: $font-kanit-400;
-  font-size: 16px;
-  line-height: 24px;
+  @include body-web($white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

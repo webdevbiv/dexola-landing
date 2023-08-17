@@ -1,0 +1,114 @@
+// Title text
+@mixin title-web($color: $white) {
+  color: $color;
+  font-family: $font-kanit-400;
+  font-size: 140px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+@mixin title-tablet($color: $white) {
+  color: $color;
+  font-family: $font-kanit-400;
+  font-size: 112px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+@mixin title-mobile($color: $white) {
+  color: $color;
+  font-family: $font-kanit-400;
+  font-size: 48px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+// SubTitle text
+@mixin sub-title-web($color: $white) {
+  color: $color;
+  font-family: $font-kanit-500;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+@mixin sub-title-tablet($color: $white) {
+  color: $color;
+  font-family: $font-kanit-500;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+@mixin sub-title-mobile($color: $white) {
+  color: $color;
+  font-family: $font-kanit-500;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+// Body text
+@mixin body-web($color: $white) {
+  color: $color;
+  font-family: $font-roboto-400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+@mixin body-tablet($color: $white) {
+  color: $color;
+  font-family: $font-roboto-400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+@mixin body-tablet($color: $white) {
+  color: $color;
+  font-family: $font-roboto-400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+
+// Button
+@mixin button(
+  $bg-color: $button-bg-color,
+  $text-color: $button-text-color
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  &:hover {
+    background-color: $button-bg-color-hover;
+  }
+}
+
+// Container
+@mixin container-web {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+@mixin container-tablet {
+  max-width: 744px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@mixin container-mobile {
+  max-width: 393px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
