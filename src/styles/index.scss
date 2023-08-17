@@ -3,7 +3,7 @@
 @import "./_mixins.scss";
 
 :root {
-  @include body-web($white);
+  @include text-body-web($white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -1,5 +1,5 @@
 // Title text
-@mixin title-web($color: $white) {
+@mixin text-title-web($color: $white) {
   color: $color;
   font-family: $font-kanit-400;
   font-size: 140px;
@@ -8,7 +8,7 @@
   text-transform: capitalize;
 }
 
-@mixin title-tablet($color: $white) {
+@mixin text-title-tablet($color: $white) {
   color: $color;
   font-family: $font-kanit-400;
   font-size: 112px;
@@ -17,7 +17,7 @@
   text-transform: capitalize;
 }
 
-@mixin title-mobile($color: $white) {
+@mixin text-title-mobile($color: $white) {
   color: $color;
   font-family: $font-kanit-400;
   font-size: 48px;
@@ -27,7 +27,7 @@
 }
 
 // SubTitle text
-@mixin sub-title-web($color: $white) {
+@mixin text-sub-title-web($color: $white) {
   color: $color;
   font-family: $font-kanit-500;
   font-size: 24px;
@@ -36,7 +36,7 @@
   text-transform: capitalize;
 }
 
-@mixin sub-title-tablet($color: $white) {
+@mixin text-sub-title-tablet($color: $white) {
   color: $color;
   font-family: $font-kanit-500;
   font-size: 20px;
@@ -45,7 +45,7 @@
   text-transform: capitalize;
 }
 
-@mixin sub-title-mobile($color: $white) {
+@mixin text-sub-title-mobile($color: $white) {
   color: $color;
   font-family: $font-kanit-500;
   font-size: 18px;
@@ -55,7 +55,7 @@
 }
 
 // Body text
-@mixin body-web($color: $white) {
+@mixin text-body-web($color: $white) {
   color: $color;
   font-family: $font-roboto-400;
   font-size: 18px;
@@ -64,7 +64,7 @@
   letter-spacing: -0.36px;
 }
 
-@mixin body-tablet($color: $white) {
+@mixin text-body-tablet($color: $white) {
   color: $color;
   font-family: $font-roboto-400;
   font-size: 16px;
@@ -73,7 +73,7 @@
   letter-spacing: -0.32px;
 }
 
-@mixin body-tablet($color: $white) {
+@mixin text-body-tablet($color: $white) {
   color: $color;
   font-family: $font-roboto-400;
   font-size: 14px;
