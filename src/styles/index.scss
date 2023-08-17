@@ -1,3 +1,4 @@
+@import "normalize.css";
 @import "./_fonts.scss";
 @import "./_variables.scss";
 @import "./_mixins.scss";
@@ -12,5 +13,4 @@
   -webkit-text-size-adjust: 100%;
 
   background-color: $primary-background-color;
-  color: $white;
 }
