@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  @include container-mobile;
+  @media screen and (min-width: 744px) {
+    @include container-tablet;
+  }
+  @media screen and (min-width: 1440px) {
+    @include container-web;
+  }
+}

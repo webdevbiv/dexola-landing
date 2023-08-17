@@ -1,3 +1,9 @@
+import { Container } from "../../components/Container/Container";
+
 export const Footer = () => {
-  return <footer>Footer</footer>;
+  return (
+    <footer>
+      <Container>Footer</Container>
+    </footer>
+  );
 };
