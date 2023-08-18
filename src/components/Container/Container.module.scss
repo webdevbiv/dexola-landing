@@ -1,11 +1,17 @@
-@import "../../styles/mixins.scss";
-
 .container {
-  @include container-mobile;
+  max-width: 393px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+
   @media screen and (min-width: 744px) {
-    @include container-tablet;
+    max-width: 744px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
   @media screen and (min-width: 1440px) {
-    @include container-web;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
   }
 }

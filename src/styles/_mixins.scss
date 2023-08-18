@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 // Title text
 @mixin text-title-web($color: $white) {
   color: $color;
@@ -87,28 +89,21 @@
   $bg-color: $button-bg-color,
   $text-color: $button-text-color
 ) {
+  font-family: $font-roboto-500;
+  font-style: normal;
+
+  outline: none;
+  border: none;
+
   background-color: $bg-color;
   color: $text-color;
+
+  cursor: pointer;
+
   &:hover {
     background-color: $button-bg-color-hover;
   }
-}
-
-// Container
-@mixin container-web {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 120px;
-}
-
-@mixin container-tablet {
-  max-width: 744px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-@mixin container-mobile {
-  max-width: 393px;
-  margin: 0 auto;
-  padding: 0 16px;
+  @media screen and (min-width: 744px) {
+    font-size: 16px;
+  }
 }
