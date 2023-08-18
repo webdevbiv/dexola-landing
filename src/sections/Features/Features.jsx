@@ -4,7 +4,7 @@ import s from "./Features.module.scss";
 import img01 from "../../images/star-runner/01.png";
 import img02 from "../../images/star-runner/02.png";
 import img03 from "../../images/star-runner/03.png";
-import arrow from "../../images/button-arrow.svg";
+import arrow from "../../images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 
 export const Features = () => {

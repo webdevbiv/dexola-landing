@@ -1,6 +1,6 @@
 import { Container } from "../../components/Container/Container";
-import logo from "../../images/logo.svg";
-import arrow from "../../images/button-arrow.svg";
+import logo from "../../images/icons/logo.svg";
+import arrow from "../../images/icons/button-arrow.svg";
 import s from "./Header.module.scss";
 
 export const Header = () => {
