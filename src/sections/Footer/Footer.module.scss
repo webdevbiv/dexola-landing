@@ -1,6 +1,8 @@
+@import "../../styles/_variables.scss";
+
 .border {
   position: relative;
-  border-top: solid 1px #204ffe;
+  border-top: solid 1px $accent-blue;
 }
 
 .wrapper {
@@ -15,8 +17,8 @@
   justify-content: center;
   max-height: 100%;
 
-  border-right: solid 1px #204ffe;
-  border-left: solid 1px #204ffe;
+  border-right: solid 1px $accent-blue;
+  border-left: solid 1px $accent-blue;
 }
 .text {
   height: 100%;
