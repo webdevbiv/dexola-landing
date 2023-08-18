@@ -118,8 +118,12 @@
   position: relative;
   width: 233px;
   height: 311px;
-  -webkit-animation: swap-image2 20s infinite normal;
-  animation: swap-image2 20s infinite normal;
+  -webkit-animation: swap-image2 20s infinite normal 4s;
+  animation: swap-image2 20s infinite normal 4s;
+  background: url("../../images/nfts/variant02/01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &::before {
     content: "";
     position: absolute;
