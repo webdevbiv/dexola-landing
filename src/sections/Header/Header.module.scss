@@ -1,7 +1,6 @@
 @import "../../styles/mixins.scss";
 
-.header {
-  position: -webkit-sticky;
+header {
   position: sticky;
   top: 0;
   background-color: $primary-background-color;
@@ -39,13 +38,13 @@
   @media screen and (min-width: 744px) {
     line-height: 24px;
     letter-spacing: 0.32px;
+    font-size: 16px;
 
     padding: 12px 66px;
   }
 }
 
 .arrow {
-  width: 15.86px;
   height: 16px;
-  margin-right: 6.45px;
+  margin-right: 6.21px;
 }

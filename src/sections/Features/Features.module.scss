@@ -1,0 +1,86 @@
+@import "../../styles/mixins.scss";
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.subTitle {
+  @include text-sub-title-web;
+  margin-right: 24px;
+}
+
+.text {
+  @include text-body-web;
+  color: $light-gray;
+  max-width: 600px;
+}
+
+.cardsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid $accent-blue;
+  img {
+    height: 307px;
+  }
+}
+
+.cardContent {
+  padding: 24px 0 24px 24px;
+
+  h4 {
+    @include text-sub-title-web;
+    line-height: 33.6px;
+    margin-bottom: 16px;
+  }
+
+  span {
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+
+  p {
+    max-width: 344px;
+    margin-bottom: 16px;
+    color: $light-gray;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+}
+
+.button {
+  @include button;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+
+  padding: 10px 16px;
+  @media screen and (min-width: 744px) {
+    line-height: 24px;
+    letter-spacing: 0.32px;
+
+    padding: 12px 90px;
+  }
+}
+
+.arrow {
+  width: auto;
+  max-height: 16px;
+  margin-right: 6.45px;
+}

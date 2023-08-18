@@ -1,0 +1,10 @@
+@import "../../styles/mixins.scss";
+
+.title {
+  @include text-title-web;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 90px;
+}
