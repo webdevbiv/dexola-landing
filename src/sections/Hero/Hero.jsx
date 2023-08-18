@@ -17,11 +17,11 @@ export const Hero = () => {
                 &#39;StarRunner.&#39;
               </p>
               <div className={s.collectionImages}>
-                <div className={s.imgWrapper}>
-                  <img src={placeHolder} alt="" className={s.img} />
+                <div className={s.imgWrapper1}>
+                  {/* <img src={placeHolder} alt="" className={s.img} /> */}
                 </div>
-                <div className={s.imgWrapper}>
-                  <img src={placeHolder} alt="" className={s.img} />
+                <div className={s.imgWrapper2}>
+                  {/* <img src={placeHolder} alt="" className={s.img} /> */}
                 </div>
               </div>
             </div>
