@@ -1,0 +1,40 @@
+.border {
+  position: relative;
+  border-top: solid 1px #204ffe;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100%;
+
+  border-right: solid 1px #204ffe;
+  border-left: solid 1px #204ffe;
+}
+.text {
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  padding: 35px 116px;
+}
+
+.listItem {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+}
