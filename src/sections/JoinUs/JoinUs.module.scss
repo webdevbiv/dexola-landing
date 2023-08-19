@@ -1,0 +1,54 @@
+@import "../../styles/_mixins.scss";
+
+.wrapper {
+  display: flex;
+  padding-bottom: 113px;
+}
+
+.content {
+  width: 50%;
+  &:first-child {
+    padding-right: 66px;
+  }
+}
+
+.title {
+  @include text-sub-title-web;
+  letter-spacing: 0.48px;
+  line-height: 32px;
+}
+
+.text {
+  @include text-body-web;
+  margin-top: 16px;
+  line-height: 28px;
+  color: $light-gray;
+}
+
+.arrow {
+  margin-top: 40px;
+}
+
+.form {
+  padding: 55px 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $accent-blue;
+
+  input {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-family: $font-roboto-400;
+    letter-spacing: 0.36px;
+    line-height: 24px;
+    font-size: 18px;
+    color: $light-gray;
+    border-bottom: 1px solid $white;
+    padding-bottom: 6px;
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 44px;
+    }
+  }
+}
