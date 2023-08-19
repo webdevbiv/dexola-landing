@@ -1,0 +1,39 @@
+@import "../../styles/_variables.scss";
+
+.table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+  thead {
+    font-family: $font-kanit-500;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+
+    th {
+      padding: 12px 24px;
+      text-align: start;
+    }
+  }
+}
+
+.row {
+  font-family: $font-roboto-400;
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  border-top: 1px solid $accent-blue;
+  border-bottom: 1px solid $accent-blue;
+
+  td {
+    border: none;
+    &:not(:first-child) {
+      padding: 13px 24px;
+    }
+    &:first-child {
+      padding: 6px 0;
+    }
+  }
+}
+
+.highlighted {
+  background-color: $table-accent-blue;
+}

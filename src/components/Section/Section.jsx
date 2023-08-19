@@ -3,7 +3,10 @@ import s from "./Section.module.scss";
 export const Section = ({ id, children }) => {
   return (
     <>
-      <section id={id} className={s.section}>
+      <section
+        id={id}
+        className={s.section}
+      >
         {children}
       </section>
     </>
