@@ -1,0 +1,35 @@
+@import "../../styles/_variables.scss";
+
+.imgWrapper {
+  position: relative;
+  width: 233px;
+  height: 311px;
+  overflow: hidden;
+  z-index: 2;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    border: 1px solid $accent-blue;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s;
+    z-index: 1;
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  .inactive {
+    opacity: 0;
+  }
+}

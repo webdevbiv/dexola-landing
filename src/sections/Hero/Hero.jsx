@@ -1,7 +1,10 @@
-import s from "./Hero.module.scss";
-import placeHolder from "../../images/nfts/placeholder.png";
 import { Container } from "../../components/Container/Container";
+import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
+import { images01 } from "../../images/nfts/variant01/index.js";
+import { images02 } from "../../images/nfts/variant02/index.js";
+
+import s from "./Hero.module.scss";
 
 export const Hero = () => {
   return (
@@ -17,12 +20,14 @@ export const Hero = () => {
                 &#39;StarRunner.&#39;
               </p>
               <div className={s.collectionImages}>
-                <div className={s.imgWrapper1}>
-                  {/* <img src={placeHolder} alt="" className={s.img} /> */}
-                </div>
-                <div className={s.imgWrapper2}>
-                  {/* <img src={placeHolder} alt="" className={s.img} /> */}
-                </div>
+                <ImageFader
+                  imgArray={images01}
+                  startTime={1}
+                />
+                <ImageFader
+                  imgArray={images02}
+                  startTime={2}
+                />
               </div>
             </div>
           </Container>
