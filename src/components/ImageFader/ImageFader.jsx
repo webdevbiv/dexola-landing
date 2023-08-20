@@ -1,76 +1,42 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import s from "./ImageFader.module.scss";
 
-export const ImageFader = ({ imgArray, startTime }) => {
-  const [imageIndex, setImageIndex] = useState(0);
-  const [currentImage, setCurrentImage] = useState(imgArray[0]);
-  const [nextImage, setNextImage] = useState(imgArray[1]);
-  const [isActive, setIsActive] = useState(true);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setImageIndex((prevIndex) => {
-  //       const newIndex = (prevIndex + 1) % imgArray.length;
-  //       if (isActive) {
-  //         setNextImage(imgArray[newIndex]);
-  //       } else {
-  //         setCurrentImage(imgArray[newIndex]);
-  //       }
-  //       return newIndex;
-  //     });
-  //     setIsActive(!isActive);
-  //   }, 2000);
-
-  //   return () => clearInterval(interval);
-  // }, [imageIndex, isActive, imgArray]);
+export const ImageFader = ({ images, delay }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    let interval;
-
-    const startTimerWithDelay = () => {
-      interval = setInterval(() => {
-        setImageIndex((prevIndex) => {
-          const newIndex = (prevIndex + 1) % imgArray.length;
-          if (isActive) {
-            setNextImage(imgArray[newIndex]);
-          } else {
-            setCurrentImage(imgArray[newIndex]);
-          }
-          return newIndex;
-        });
-        setIsActive(!isActive);
-      }, 2000);
+    const startInterval = () => {
+      return setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // 3 seconds for each image
     };
 
-    const delayStartTime = setTimeout(() => {
-      startTimerWithDelay();
-    }, startTime * 1000); // Set the delay time using the startTime variable
+    const timeout = setTimeout(startInterval, delay);
 
-    // Cleanup function to clear the interval and timeout when the component unmounts or when the dependency array changes
     return () => {
-      clearInterval(interval);
-      clearTimeout(delayStartTime);
+      clearTimeout(timeout); // Cleanup timeout
+      clearInterval(startInterval); // Cleanup interval
     };
-  }, [imageIndex, isActive, imgArray, startTime]);
+  }, [images, delay]);
 
   return (
-    <div className={s.imgWrapper}>
-      <img
-        src={currentImage}
-        alt=''
-        className={`${s.img} ${isActive ? s.active : s.inactive}`}
-      />
-      <img
-        src={nextImage}
-        alt=''
-        className={`${s.img} ${isActive ? s.inactive : s.active}`}
-      />
+    <div className={s.imageContainer}>
+      {images.map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Nft image ${index}`}
+          className={`${s.image} ${
+            index === currentImageIndex ? s.active : ""
+          }`}
+        />
+      ))}
     </div>
   );
 };
 
 ImageFader.propTypes = {
-  imgArray: PropTypes.array.isRequired,
-  startTime: PropTypes.number.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  delay: PropTypes.number.isRequired,
 };
