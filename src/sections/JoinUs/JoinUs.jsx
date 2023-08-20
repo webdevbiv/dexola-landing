@@ -93,7 +93,7 @@ export const JoinUs = () => {
             <p className={s.text}>
               Join Our Community and Embark on a Journey of Opportunities.
               Discover the full range of our services that cater to your needs.
-              We've got you covered with top-notch solutions.
+              We&#39;ve got you covered with top-notch solutions.
             </p>
             <img
               src={arrowImg}

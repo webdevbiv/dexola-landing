@@ -9,16 +9,29 @@ export const Header = () => {
       <Container>
         <div className={s.wrapper}>
           <a
-            href="https://dexola.com/"
-            target="_blank"
-            rel="noreferrer noopener"
+            href='https://dexola.com/'
+            target='_blank'
+            rel='noreferrer noopener'
           >
-            <img src={logo} alt="logo" className={s.logo} />
+            <img
+              src={logo}
+              alt='logo'
+              className={s.logo}
+            />
           </a>
-          <button className={s.button}>
-            <img src={arrow} alt="join-now" className={s.arrow} />
-            <span>Join Now</span>
-          </button>
+          <a
+            href='#join-us'
+            className={s.buttonLink}
+          >
+            <button className={s.button}>
+              <img
+                src={arrow}
+                alt='join-now'
+                className={s.arrow}
+              />
+              <span>Join Now</span>
+            </button>
+          </a>
         </div>
       </Container>
     </header>

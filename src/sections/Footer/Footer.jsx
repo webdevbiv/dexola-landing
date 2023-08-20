@@ -18,7 +18,14 @@ export const Footer = () => {
       <div className={s.border}>
         <Container>
           <div className={s.wrapper}>
-            <p className={s.text}>Designed by Dexola - 2023</p>
+            <a
+              href='https://dexola.com/'
+              target='_blank'
+              rel='noreferrer noopener'
+              className={s.link}
+            >
+              Designed by Dexola - 2023
+            </a>
             <div className={s.divider}>
               <ul className={s.list}>
                 {socialLinks.map((item, index) => (
