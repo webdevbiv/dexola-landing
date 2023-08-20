@@ -9,7 +9,7 @@ export const ImageFader = ({ images, delay }) => {
     const startInterval = () => {
       return setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 3000); // 3 seconds for each image
+      }, 4000); // 4 seconds for each image
     };
 
     const timeout = setTimeout(startInterval, delay);

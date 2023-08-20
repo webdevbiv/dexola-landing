@@ -22,11 +22,11 @@ export const Hero = () => {
               <div className={s.collectionImages}>
                 <ImageFader
                   images={images01}
-                  delay={500}
+                  delay={0}
                 />
                 <ImageFader
                   images={images02}
-                  delay={1500}
+                  delay={1000}
                 />
               </div>
             </div>
