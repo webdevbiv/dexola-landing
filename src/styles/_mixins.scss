@@ -85,10 +85,7 @@
 }
 
 // Button
-@mixin button(
-  $bg-color: $button-bg-color,
-  $text-color: $button-text-color
-) {
+@mixin button($bg-color: $button-bg-color, $text-color: $button-text-color) {
   font-family: $font-roboto-500;
   font-style: normal;
 
@@ -105,5 +102,7 @@
   }
   @media screen and (min-width: 744px) {
     font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.32px;
   }
 }

@@ -63,7 +63,8 @@ import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
 import s from "./JoinUs.module.scss";
-import arrowImg from "../../images/icons/arrow-right.svg";
+import arrowSvg from "../../images/icons/arrow-right.svg";
+import lineSvg from "../../images/icons/button-line.svg";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
@@ -72,7 +73,7 @@ const SignupSchema = Yup.object().shape({
     .required("Required"),
   password: Yup.string()
     .min(2, "Too Short!")
-    .max(50, "Too Long!")
+    .max(20, "Too Long!")
     .required("Required"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Passwords must match")
@@ -96,7 +97,7 @@ export const JoinUs = () => {
               We&#39;ve got you covered with top-notch solutions.
             </p>
             <img
-              src={arrowImg}
+              src={arrowSvg}
               alt='arrow right'
               className={s.arrow}
             />
@@ -116,50 +117,71 @@ export const JoinUs = () => {
             >
               {({ errors, touched }) => (
                 <Form className={s.form}>
-                  <Field
-                    name='email'
-                    type='email'
-                    placeholder='Enter your email'
-                  />
-                  <ErrorMessage
-                    name='email'
-                    component='div'
-                  />
-
-                  <Field
-                    name='phoneNumber'
-                    type='text'
-                    placeholder='Enter your phone number'
-                  />
-                  <ErrorMessage
-                    name='phoneNumber'
-                    component='div'
-                  />
-
-                  <Field
-                    name='password'
-                    type='password'
-                    placeholder='Enter your password'
-                  />
-                  <ErrorMessage
-                    name='password'
-                    component='div'
-                  />
-
-                  <Field
-                    name='confirmPassword'
-                    type='password'
-                    placeholder='Confirm your password'
-                  />
-                  <ErrorMessage
-                    name='confirmPassword'
-                    component='div'
-                  />
-
-                  <button type='submit'>
-                    <img />
-                    <span>Send it</span>
-                  </button>
+                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                    <Field
+                      name='email'
+                      type='email'
+                      placeholder='Enter your email'
+                      className={s.input}
+                    />
+                    <ErrorMessage
+                      name='email'
+                      component='div'
+                      className={s.error}
+                    />
+                  </div>
+                  <div className={s.inputWrapper}>
+                    <Field
+                      name='phoneNumber'
+                      type='text'
+                      placeholder='Enter your phone number'
+                      className={s.input}
+                    />
+                    <ErrorMessage
+                      name='phoneNumber'
+                      component='div'
+                      className={s.error}
+                    />
+                  </div>
+                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                    <Field
+                      name='password'
+                      type='password'
+                      placeholder='Enter your password'
+                      className={s.input}
+                    />
+                    <ErrorMessage
+                      name='password'
+                      component='div'
+                      className={s.error}
+                    />
+                  </div>
+                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                    <Field
+                      name='confirmPassword'
+                      type='password'
+                      placeholder='Confirm your password'
+                      className={s.input}
+                    />
+                    <ErrorMessage
+                      name='confirmPassword'
+                      component='div'
+                      className={s.error}
+                    />
+                  </div>
+                  <div>
+                    <button
+                      type='submit'
+                      className={s.button}
+                    >
+                      <img
+                        src={lineSvg}
+                        alt='line'
+                        className={s.line}
+                      />
+                      <span>Send it</span>
+                    </button>
+                  </div>
                 </Form>
               )}
             </Formik>
