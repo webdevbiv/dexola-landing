@@ -2,12 +2,17 @@
 
 .imageContainer {
   position: relative;
-  width: 233px;
-  height: 311px;
-  // top: -1px;
-  // bottom: -1px;
-  // left: -1px;
-  // right: -1px;
+  top: 0;
+  @media screen and (min-width: 744px) {
+    width: 100%;
+    height: 311px;
+    top: 1px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 233px;
+    height: 311px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -16,18 +21,18 @@
     z-index: 1;
     outline: 1px solid $accent-blue;
   }
+}
 
-  .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 
-    &.active {
-      opacity: 1;
-    }
+  &.active {
+    opacity: 1;
   }
 }

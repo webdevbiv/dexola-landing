@@ -3,16 +3,8 @@
 .border {
   position: relative;
   top: 1px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    top: -1px;
-    bottom: -1px;
-    border-top: 1px solid $accent-blue;
-    border-bottom: 1px solid $accent-blue;
-  }
+  border-top: 1px solid $accent-blue;
+  border-bottom: 1px solid $accent-blue;
 }
 
 .wrapper {
@@ -33,17 +25,6 @@
 .collectionImages {
   display: flex;
   flex-direction: row;
-  top: -1px;
-  bottom: -1px;
-}
-
-.img {
-  opacity: 0;
-  height: 311px;
-}
-
-.fadeIn {
-  opacity: 1;
 }
 
 .runningTextWrapper {
