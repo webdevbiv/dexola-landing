@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Container } from "../../components/Container/Container";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
-import { images01 } from "../../images/nfts/variant01/index.js";
-import { images02 } from "../../images/nfts/variant02/index.js";
+import { web01, web02 } from "../../images/nfts/web/index.js";
+import { tablet01, tablet02 } from "../../images/nfts/tablet/index.js";
 
 import s from "./Hero.module.scss";
 
@@ -13,19 +13,6 @@ const Text = () => (
     the StarRunner Ecosystem – the beating heart that drives the
     adrenaline-charged galactic P2E odyssey of &#39;StarRunner.&#39;
   </p>
-);
-
-const ImageGroup = () => (
-  <div className={s.collectionImages}>
-    <ImageFader
-      images={images01}
-      delay={0}
-    />
-    <ImageFader
-      images={images02}
-      delay={1000}
-    />
-  </div>
 );
 
 const HeroTitle = () => (
@@ -57,7 +44,16 @@ export const Hero = () => {
             <Container>
               <div className={s.wrapper}>
                 <Text />
-                <ImageGroup />
+                <div className={s.collectionImages}>
+                  <ImageFader
+                    images={web01}
+                    delay={0}
+                  />
+                  <ImageFader
+                    images={web02}
+                    delay={1000}
+                  />
+                </div>
               </div>
             </Container>
           </div>
@@ -73,7 +69,14 @@ export const Hero = () => {
           <Container>
             <div className={s.wrapperTablet}>
               <div className={s.collectionImages}>
-                <ImageGroup />
+                <ImageFader
+                  images={tablet01}
+                  delay={0}
+                />
+                <ImageFader
+                  images={tablet02}
+                  delay={1000}
+                />
               </div>
             </div>
           </Container>

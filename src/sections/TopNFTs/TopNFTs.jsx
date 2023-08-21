@@ -1,11 +1,11 @@
 import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-import img01 from "../../images/nfts/top/01.png";
-import img02 from "../../images/nfts/top/02.png";
-import img03 from "../../images/nfts/top/03.png";
-import img04 from "../../images/nfts/top/04.png";
-import img05 from "../../images/nfts/top/05.png";
+import img01 from "../../images/nfts/avatars/01.png";
+import img02 from "../../images/nfts/avatars/02.png";
+import img03 from "../../images/nfts/avatars/03.png";
+import img04 from "../../images/nfts/avatars/04.png";
+import img05 from "../../images/nfts/avatars/05.png";
 import s from "./TopNFTs.module.scss";
 
 const topNfts = [
