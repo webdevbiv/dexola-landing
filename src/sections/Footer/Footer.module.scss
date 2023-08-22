@@ -1,4 +1,5 @@
 @import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 
 .border {
   position: relative;
@@ -23,21 +24,49 @@
 
 .link {
   text-decoration: none;
-  color: $white;
+  @media screen and (min-width: 744px) {
+    @include text-body-tablet($light-gray);
+  }
+  @media screen and (min-width: 1440px) {
+    @include text-body-web($white);
+  }
 }
+
 .text {
   height: 100%;
+  @media screen and (min-width: 744px) {
+    @include text-body-tablet($light-gray);
+  }
+  @media screen and (min-width: 1440px) {
+    @include text-body-web($white);
+  }
 }
 
 .list {
   display: flex;
   flex-direction: row;
-  padding: 35px 116px;
+
+  @media screen and (min-width: 744px) {
+    padding: 34px 61.5px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 35px 116px;
+  }
 }
 
 .listItem {
   &:not(:last-child) {
     margin-right: 40px;
+  }
+  @media screen and (min-width: 744px) {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }
 
