@@ -22,14 +22,15 @@
 }
 
 .text {
-  @include text-body-web;
+  @include text-body-mobile;
 
-  max-width: 640px;
   @media screen and (min-width: 744px) {
     @include text-body-tablet;
     padding-left: 0;
   }
   @media screen and (min-width: 1440px) {
+    @include text-body-web;
+    max-width: 601px;
     padding-top: 159px;
     padding-bottom: 55px;
     padding-left: 24px;
@@ -50,16 +51,22 @@
   font-family: $font-kanit-500;
 
   font-style: normal;
-  line-height: 426.36px;
+
   white-space: nowrap;
   animation: marquee 15s linear infinite;
-  margin: 0;
+
+  font-size: 120px;
+  line-height: 150.5px;
+  margin: 15px 0;
   @media screen and (min-width: 744px) {
     font-size: 280px;
     line-height: 100%;
+    margin: 13px 0;
   }
   @media screen and (min-width: 1440px) {
     font-size: 340px;
+    line-height: 426.36px;
+    margin: 0;
   }
 }
 
@@ -72,7 +79,7 @@
   }
 }
 
-.wrapperTablet {
-  display: flex;
-  flex-direction: column;
-}
+// .wrapperTablet {
+//   display: flex;
+//   flex-direction: column;
+// }

@@ -14,11 +14,11 @@ function App() {
       <Header />
       <Main>
         <Hero />
-        <Features />
-        <TopNFTs />
-        <JoinUs />
+        {/* <Features /> */}
+        {/* <TopNFTs /> */}
+        {/* <JoinUs /> */}
       </Main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

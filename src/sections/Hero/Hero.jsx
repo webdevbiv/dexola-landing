@@ -4,6 +4,7 @@ import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
 import { web01, web02 } from "../../images/nfts/web/index.js";
 import { tablet01, tablet02 } from "../../images/nfts/tablet/index.js";
+import { mobile01, mobile02 } from "../../images/nfts/mobile/index.js";
 
 import s from "./Hero.module.scss";
 
@@ -34,7 +35,7 @@ export const Hero = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [windowWidth]);
 
   if (windowWidth >= 1440) {
     return (
@@ -62,32 +63,34 @@ export const Hero = () => {
       </>
     );
   }
+
   if (windowWidth < 1440) {
     return (
-      <>
-        <Section id={"hero"}>
-          <Container>
-            <div className={s.wrapperTablet}>
-              <div className={s.collectionImages}>
-                <ImageFader
-                  images={tablet01}
-                  delay={0}
-                />
-                <ImageFader
-                  images={tablet02}
-                  delay={1000}
-                />
-              </div>
+      <Section id={"hero"}>
+        <Container>
+          <div className={s.wrapperTablet}>
+            <div
+              key={windowWidth < 744 ? mobile01 : tablet01}
+              className={s.collectionImages}
+            >
+              <ImageFader
+                images={windowWidth < 744 ? mobile01 : tablet01}
+                delay={0}
+              />
+              <ImageFader
+                images={windowWidth < 744 ? mobile02 : tablet02}
+                delay={1000}
+              />
             </div>
-          </Container>
-          <HeroTitle />
-          <Container>
-            <div className={s.wrapperTablet}>
-              <Text />
-            </div>
-          </Container>
-        </Section>
-      </>
+          </div>
+        </Container>
+        <HeroTitle />
+        <Container>
+          <div className={s.wrapperTablet}>
+            <Text />
+          </div>
+        </Container>
+      </Section>
     );
   }
 };
