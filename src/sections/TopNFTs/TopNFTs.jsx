@@ -71,7 +71,7 @@ export const TopNFTs = () => {
               <th>Rarity Level</th>
               <th>Total Games</th>
               <th>Games Won</th>
-              <th>Price</th>
+              <th>Price (ETH)</th>
             </tr>
           </thead>
           <tbody>

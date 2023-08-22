@@ -1,5 +1,12 @@
 .section {
-  &:not(:first-child) {
-    padding-top: 66px;
+  @media screen and (min-width: 744px) {
+    &:not(:first-child) {
+      padding-top: 90px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &:not(:first-child) {
+      padding-top: 66px;
+    }
   }
 }

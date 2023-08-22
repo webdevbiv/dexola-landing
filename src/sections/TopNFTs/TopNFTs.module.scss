@@ -6,30 +6,63 @@
   width: 100%;
   thead {
     font-family: $font-kanit-500;
-    font-size: 24px;
-    letter-spacing: -0.48px;
+    @media screen and (min-width: 744px) {
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 24px;
+      letter-spacing: -0.48px;
+    }
 
     th {
-      padding: 12px 24px;
       text-align: start;
+      @media screen and (min-width: 744px) {
+        &:nth-child(3) {
+          padding: 12px 16px;
+        }
+      }
+      @media screen {
+        padding: 12px 24px;
+      }
     }
   }
 }
 
 .row {
   font-family: $font-roboto-400;
-  font-size: 18px;
-  letter-spacing: -0.36px;
+  white-space: nowrap;
   border-top: 1px solid $accent-blue;
   border-bottom: 1px solid $accent-blue;
+  line-height: normal;
+  @media screen and (min-width: 744px) {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    letter-spacing: -0.36px;
+  }
 
   td {
     border: none;
-    &:not(:first-child) {
-      padding: 13px 24px;
+    @media screen and (min-width: 744px) {
+      &:not(:first-child) {
+        padding: 12px 24px;
+      }
+      &:nth-child(3) {
+        padding: 12px 16px;
+      }
     }
+    @media screen and (min-width: 1440px) {
+      &:not(:first-child) {
+        padding: 13px 24px;
+      }
+    }
+
     &:first-child {
-      padding: 6px 0;
+      padding: 8px 0;
     }
   }
 }

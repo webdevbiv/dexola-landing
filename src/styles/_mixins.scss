@@ -75,7 +75,7 @@
   letter-spacing: -0.32px;
 }
 
-@mixin text-body-tablet($color: $white) {
+@mixin text-body-mobile($color: $white) {
   color: $color;
   font-family: $font-roboto-400;
   font-size: 14px;

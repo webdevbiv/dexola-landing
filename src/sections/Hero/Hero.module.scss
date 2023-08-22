@@ -23,11 +23,17 @@
 
 .text {
   @include text-body-web;
-  padding-top: 159px;
-  padding-bottom: 55px;
-  padding-left: 24px;
 
   max-width: 640px;
+  @media screen and (min-width: 744px) {
+    @include text-body-tablet;
+    padding-left: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 159px;
+    padding-bottom: 55px;
+    padding-left: 24px;
+  }
 }
 
 .collectionImages {
@@ -42,12 +48,19 @@
 
 .runningText {
   font-family: $font-kanit-500;
-  font-size: 340px;
+
   font-style: normal;
   line-height: 426.36px;
   white-space: nowrap;
   animation: marquee 15s linear infinite;
   margin: 0;
+  @media screen and (min-width: 744px) {
+    font-size: 280px;
+    line-height: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 340px;
+  }
 }
 
 @keyframes marquee {

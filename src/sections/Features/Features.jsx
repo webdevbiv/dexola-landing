@@ -55,8 +55,14 @@ export const Features = () => {
               className={s.card}
               key={card.number}
             >
-              <img
-                src={card.img}
+              <div
+                style={{
+                  backgroundImage: `url(${card.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                // src={card.img}
+                className={s.cardImage}
                 alt={card.alt}
               />
               <div className={s.cardContent}>
