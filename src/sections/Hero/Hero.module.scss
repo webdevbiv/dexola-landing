@@ -53,15 +53,17 @@
   font-style: normal;
 
   white-space: nowrap;
-  animation: marquee 15s linear infinite;
+  animation: marquee-375 15s linear infinite;
 
   font-size: 120px;
   line-height: 150.5px;
   margin: 15px 0;
+
   @media screen and (min-width: 744px) {
     font-size: 280px;
     line-height: 100%;
     margin: 13px 0;
+    animation-name: marquee-744;
   }
   @media screen and (min-width: 1440px) {
     font-size: 340px;
@@ -70,7 +72,25 @@
   }
 }
 
-@keyframes marquee {
+@keyframes marquee-375 {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes marquee-744 {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-140%);
+  }
+}
+
+@keyframes marquee-1440 {
   0% {
     transform: translateX(100%);
   }
@@ -78,8 +98,3 @@
     transform: translateX(-150%);
   }
 }
-
-// .wrapperTablet {
-//   display: flex;
-//   flex-direction: column;
-// }
