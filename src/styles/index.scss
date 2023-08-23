@@ -1,11 +1,6 @@
-@import "normalize.css";
 @import "./_fonts.scss";
 @import "./_variables.scss";
 @import "./_mixins.scss";
-
-:root {
-  @include text-body-web($white);
-}
 
 html {
   scroll-behavior: smooth;
@@ -37,7 +32,6 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
 }
 
 ul {

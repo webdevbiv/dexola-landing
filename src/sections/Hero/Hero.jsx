@@ -70,7 +70,7 @@ export const Hero = () => {
         <Container>
           <div className={s.wrapperTablet}>
             <div
-              key={windowWidth < 744 ? mobile01 : tablet01}
+              key={windowWidth < 744 ? "mobile" : "tablet"}
               className={s.collectionImages}
             >
               <ImageFader

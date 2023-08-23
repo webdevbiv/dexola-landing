@@ -1,11 +1,14 @@
 @import "../../styles/_variables.scss";
 
 .table {
+  table-layout: auto;
   border-collapse: collapse;
   border: none;
   width: 100%;
+  color: $white;
   thead {
     font-family: $font-kanit-500;
+    font-weight: 500;
     @media screen and (min-width: 744px) {
       font-size: 20px;
       letter-spacing: 0;
@@ -18,15 +21,23 @@
 
     th {
       text-align: start;
+      font-weight: 500;
+      padding: 12px 16px;
+
       @media screen and (min-width: 744px) {
         &:nth-child(3) {
           padding: 12px 16px;
         }
       }
-      @media screen {
+      @media screen and (min-width: 1440px) {
         padding: 12px 24px;
       }
     }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 64px;
   }
 }
 
@@ -44,10 +55,21 @@
     font-size: 18px;
     letter-spacing: -0.36px;
   }
+  tr {
+    width: auto;
+  }
 
   td {
+    width: auto;
     border: none;
+    padding: 0;
+    height: 100%;
     @media screen and (min-width: 744px) {
+      line-height: normal;
+      &:first-child {
+        width: 64px;
+        padding: 8px 0;
+      }
       &:not(:first-child) {
         padding: 12px 24px;
       }
@@ -60,13 +82,69 @@
         padding: 13px 24px;
       }
     }
-
-    &:first-child {
-      padding: 8px 0;
-    }
   }
 }
 
 .highlighted {
   background-color: $table-accent-blue;
+}
+
+.mTopBorder {
+  border-top: 1px solid $accent-blue;
+}
+
+.mBottomBorder {
+  border-bottom: 1px solid $accent-blue;
+}
+
+.mTable {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+  color: $white;
+  th {
+    text-align: start;
+  }
+  td {
+    text-align: end;
+  }
+  img {
+    padding-top: 12px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+  }
+}
+
+.firstRow {
+  font-family: $font-kanit-500;
+
+  line-height: 22.4px;
+  font-size: 16px;
+  font-style: normal;
+
+  th {
+    padding-left: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+  td {
+    padding-right: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+}
+
+.mHeader {
+  font-family: $font-roboto-400;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+}
+
+.mData {
+  padding-right: 24px;
+  font-family: $font-roboto-400;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.28px;
 }

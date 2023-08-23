@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Main>
         <Hero />
-        <Features />
-        {/* <TopNFTs /> */}
+        {/* <Features /> */}
+        <TopNFTs />
         {/* <JoinUs /> */}
       </Main>
       {/* <Footer /> */}
