@@ -1,13 +1,9 @@
-import {
-  Features,
-  Footer,
-  Header,
-  Hero,
-  JoinUs,
-  Main,
-  TopNFTs,
-} from "../sections";
+import { lazy } from "react";
+import { Features, Footer, Header, JoinUs, Hero, Main } from "../sections";
 
+// const Main = lazy(() => import("../sections"));
+// const Hero = lazy(() => import("../sections"));
+// const TopNFTs = lazy(() => import("../sections"));
 function App() {
   return (
     <>
@@ -15,7 +11,7 @@ function App() {
       <Main>
         <Hero />
         <Features />
-        <TopNFTs />
+        {/* <TopNFTs /> */}
         {/* <JoinUs /> */}
       </Main>
       {/* <Footer /> */}
