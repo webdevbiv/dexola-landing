@@ -8,8 +8,14 @@
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 744px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .divider {
@@ -22,8 +28,19 @@
   border-left: solid 1px $accent-blue;
 }
 
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 34px;
+}
+
 .link {
+  @include text-body-mobile($light-gray);
   text-decoration: none;
+
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
@@ -33,7 +50,7 @@
 }
 
 .text {
-  height: 100%;
+  @include text-body-mobile($light-gray);
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
@@ -45,7 +62,10 @@
 .list {
   display: flex;
   flex-direction: row;
-
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  margin-bottom: 20px;
   @media screen and (min-width: 744px) {
     padding: 34px 61.5px;
   }
@@ -56,7 +76,7 @@
 
 .listItem {
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 32px;
   }
   @media screen and (min-width: 744px) {
     &:not(:last-child) {

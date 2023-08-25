@@ -75,7 +75,7 @@ export const Footer = () => {
         <div className={s.border}>
           <Container>
             <div className={s.wrapper}>
-              <div className={s.textTabletWrapper}>
+              <div className={s.textWrapper}>
                 <a
                   href='https://dexola.com/'
                   target='_blank'

@@ -1,7 +1,16 @@
 @import "../../styles/_mixins.scss";
+.section {
+  margin-bottom: 69px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 24px 0 24px;
+}
 
 .wrapper {
   display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 744px) {
     flex-direction: column;
@@ -14,6 +23,8 @@
 }
 
 .content {
+  margin-bottom: 32px;
+
   @media screen and (min-width: 744px) {
     margin-bottom: 56px;
     &:first-child {
@@ -29,6 +40,9 @@
 }
 
 .title {
+  @include text-sub-title-mobile;
+  margin-bottom: 12px;
+
   @media screen and (min-width: 744px) {
     @include text-sub-title-tablet;
     letter-spacing: 0;
@@ -45,7 +59,8 @@
 }
 
 .text {
-  color: $light-gray;
+  @include text-body-mobile($light-gray);
+
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
@@ -63,23 +78,37 @@
 }
 
 .form {
-  padding: 55px 40px;
   display: flex;
   flex-direction: column;
+
+  padding: 24px 16px;
+
   border: 1px solid $accent-blue;
+
+  @media screen and (min-width: 1440px) {
+    padding: 55px 40px;
+  }
 }
 
 .inputWrapper {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
+
   &.requiredField::before {
     content: "*";
     position: absolute;
+
+    color: $warning-rose;
+
     font-family: $font-roboto-400;
     font-size: 16px;
     line-height: 24px;
-    color: $warning-rose;
-    top: 8px;
+    letter-spacing: 0.32px;
+
+    padding: 8px 0;
+    bottom: 54%;
   }
 }
 
@@ -89,18 +118,23 @@
   border: none;
   padding: 0;
 
-  font-family: $font-roboto-400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.36px;
-  color: $light-gray;
-  margin-bottom: 28px;
-
   border-bottom: 1px solid $white;
-  padding-bottom: 8px;
-  padding-top: 8px;
-  padding-left: 30px;
+
+  @include text-body-mobile($light-gray);
+  padding: 8px 0 14px 30px;
   margin-bottom: 44px;
+
+  @media screen and (min-width: 744px) {
+    @include text-body-tablet($light-gray);
+  }
+  @media screen and (min-width: 1440px) {
+    @include text-body-web($light-gray);
+
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 30px;
+    margin-bottom: 44px;
+  }
 
   &:focus {
     outline: none;
@@ -122,10 +156,24 @@
   @include button;
   display: flex;
   align-items: center;
-  padding-left: 56px;
-  padding-right: 71px;
-  padding-top: 11px;
-  padding-bottom: 13px;
+  justify-content: center;
+
+  padding: 11px 0 13px 0;
+  width: 100%;
+
+  font-family: $font-roboto-500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 56px;
+    padding-right: 71px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+  }
+
   img {
     margin-right: 14px;
   }

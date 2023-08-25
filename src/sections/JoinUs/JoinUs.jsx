@@ -82,12 +82,15 @@ const SignupSchema = Yup.object().shape({
 
 export const JoinUs = () => {
   return (
-    <Section id={"join-us"}>
-      <Container>
-        <Title
-          text={"Join Us"}
-          number={"03"}
-        />
+    <section
+      id={"join-us"}
+      className={s.section}
+    >
+      <Title
+        text={"Join Us"}
+        number={"03"}
+      />
+      <div className={s.container}>
         <div className={s.wrapper}>
           <div className={s.content}>
             <h3 className={s.title}>Experience the Power of StarRunner</h3>
@@ -102,92 +105,91 @@ export const JoinUs = () => {
               className={s.arrow}
             />
           </div>
-          <div className={s.content}>
-            <Formik
-              initialValues={{
-                email: "",
-                phoneNumber: "",
-                password: "",
-                confirmPassword: "",
-              }}
-              validationSchema={SignupSchema}
-              onSubmit={(values) => {
-                console.log(values);
-              }}
-            >
-              {({ errors, touched }) => (
-                <Form className={s.form}>
-                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
-                    <Field
-                      name='email'
-                      type='email'
-                      placeholder='Enter your email'
-                      className={s.input}
+
+          <Formik
+            initialValues={{
+              email: "",
+              phoneNumber: "",
+              password: "",
+              confirmPassword: "",
+            }}
+            validationSchema={SignupSchema}
+            onSubmit={(values) => {
+              console.log(values);
+            }}
+          >
+            {({ errors, touched }) => (
+              <Form className={s.form}>
+                <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                  <Field
+                    name='email'
+                    type='email'
+                    placeholder='Enter your email'
+                    className={s.input}
+                  />
+                  <ErrorMessage
+                    name='email'
+                    component='div'
+                    className={s.error}
+                  />
+                </div>
+                <div className={s.inputWrapper}>
+                  <Field
+                    name='phoneNumber'
+                    type='text'
+                    placeholder='Enter your phone number'
+                    className={s.input}
+                  />
+                  <ErrorMessage
+                    name='phoneNumber'
+                    component='div'
+                    className={s.error}
+                  />
+                </div>
+                <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                  <Field
+                    name='password'
+                    type='password'
+                    placeholder='Enter your password'
+                    className={s.input}
+                  />
+                  <ErrorMessage
+                    name='password'
+                    component='div'
+                    className={s.error}
+                  />
+                </div>
+                <div className={`${s.inputWrapper} ${s.requiredField}`}>
+                  <Field
+                    name='confirmPassword'
+                    type='password'
+                    placeholder='Confirm your password'
+                    className={s.input}
+                  />
+                  <ErrorMessage
+                    name='confirmPassword'
+                    component='div'
+                    className={s.error}
+                  />
+                </div>
+                <div>
+                  <button
+                    type='submit'
+                    className={s.button}
+                  >
+                    <img
+                      src={lineSvg}
+                      alt='line'
+                      className={s.line}
                     />
-                    <ErrorMessage
-                      name='email'
-                      component='div'
-                      className={s.error}
-                    />
-                  </div>
-                  <div className={s.inputWrapper}>
-                    <Field
-                      name='phoneNumber'
-                      type='text'
-                      placeholder='Enter your phone number'
-                      className={s.input}
-                    />
-                    <ErrorMessage
-                      name='phoneNumber'
-                      component='div'
-                      className={s.error}
-                    />
-                  </div>
-                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
-                    <Field
-                      name='password'
-                      type='password'
-                      placeholder='Enter your password'
-                      className={s.input}
-                    />
-                    <ErrorMessage
-                      name='password'
-                      component='div'
-                      className={s.error}
-                    />
-                  </div>
-                  <div className={`${s.inputWrapper} ${s.requiredField}`}>
-                    <Field
-                      name='confirmPassword'
-                      type='password'
-                      placeholder='Confirm your password'
-                      className={s.input}
-                    />
-                    <ErrorMessage
-                      name='confirmPassword'
-                      component='div'
-                      className={s.error}
-                    />
-                  </div>
-                  <div>
-                    <button
-                      type='submit'
-                      className={s.button}
-                    >
-                      <img
-                        src={lineSvg}
-                        alt='line'
-                        className={s.line}
-                      />
-                      <span>Send it</span>
-                    </button>
-                  </div>
-                </Form>
-              )}
-            </Formik>
-          </div>
+                    <span>Send it</span>
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 };

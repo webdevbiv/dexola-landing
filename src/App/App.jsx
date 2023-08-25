@@ -19,9 +19,9 @@ function App() {
         <Hero />
         <Features />
         <TopNFTs />
-        {/* <JoinUs /> */}
+        <JoinUs />
       </Main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
