@@ -1,6 +1,9 @@
 .section {
-  &:not(:last-child) {
-    padding-bottom: 127px;
+  &:first-child {
+    margin-bottom: 148px;
+  }
+  &:not(:first-child) {
+    margin-bottom: 89px;
   }
   @media screen and (min-width: 744px) {
     &:not(:last-child) {

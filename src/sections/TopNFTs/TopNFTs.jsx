@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-import img01 from "../../images/nfts/avatars/01.png";
-import img02 from "../../images/nfts/avatars/02.png";
-import img03 from "../../images/nfts/avatars/03.png";
-import img04 from "../../images/nfts/avatars/04.png";
-import img05 from "../../images/nfts/avatars/05.png";
+import img01 from "../../images/nfts/avatars/(1).webp";
+import img02 from "../../images/nfts/avatars/(2).webp";
+import img03 from "../../images/nfts/avatars/(3).webp";
+import img04 from "../../images/nfts/avatars/(4).webp";
+import img05 from "../../images/nfts/avatars/(5).webp";
 import s from "./TopNFTs.module.scss";
 
 const topNfts = [
@@ -56,114 +56,6 @@ const topNfts = [
     price: 0.5,
   },
 ];
-
-// export const TopNFTs = () => {
-//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setWindowWidth(window.innerWidth);
-//     };
-//     window.addEventListener("resize", handleResize);
-
-//     return () => {
-//       window.removeEventListener("resize", handleResize);
-//     };
-//   });
-//   if (windowWidth < 744) {
-//     <Section id={"top-nfts"}>
-//       <Container>
-//         <Title
-//           text={"Top NFTs"}
-//           number={"02"}
-//         />
-//         <table
-//           className={s.table}
-//           cellSpacing='0'
-//           cellPadding='0'
-//         >
-//           <thead>
-//             <tr>
-//               <th></th>
-//               <th>NFT Name</th>
-//               <th>Rarity Level</th>
-//               <th>Total Games</th>
-//               <th>Games Won</th>
-//               <th>Price (ETH)</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {topNfts.map((nft, index) => (
-//               <tr
-//                 key={index}
-//                 className={`${s.row} ${index % 2 === 0 ? s.highlighted : ""}`}
-//               >
-//                 <td>
-//                   <img
-//                     src={nft.avatar}
-//                     alt={`Avatar for ${nft.nftName}`}
-//                   />
-//                 </td>
-//                 <td>{nft.nftName}</td>
-//                 <td>{nft.rarityLevel}</td>
-//                 <td>{nft.totalGames}</td>
-//                 <td>{nft.gamesWon}</td>
-//                 <td>{nft.price.toFixed(1)}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </Container>
-//     </Section>;
-//   }
-
-//   return (
-//     <Section id={"top-nfts"}>
-//       <Container>
-//         <Title
-//           text={"Top NFTs"}
-//           number={"02"}
-//         />
-//         <table
-//           className={s.table}
-//           cellSpacing='0'
-//           cellPadding='0'
-//         >
-//           <thead>
-//             <tr>
-//               <th></th>
-//               <th>NFT Name</th>
-//               <th>Rarity Level</th>
-//               <th>Total Games</th>
-//               <th>Games Won</th>
-//               <th>Price (ETH)</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {topNfts.map((nft, index) => (
-//               <tr
-//                 key={index}
-//                 className={`${s.row} ${index % 2 === 0 ? s.highlighted : ""}`}
-//               >
-//                 <td>
-//                   <img
-//                     src={nft.avatar}
-//                     alt={`Avatar for ${nft.nftName}`}
-//                   />
-//                 </td>
-//                 <td>{nft.nftName}</td>
-//                 <td>{nft.rarityLevel}</td>
-//                 <td>{nft.totalGames}</td>
-//                 <td>{nft.gamesWon}</td>
-//                 <td>{nft.price.toFixed(1)}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </Container>
-//     </Section>
-//   );
-// };
 
 export const TopNFTs = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -230,35 +122,47 @@ export const TopNFTs = () => {
             <tr
               className={`${index % 2 !== 0 ? s.highlighted : ""} ${
                 index % 2 !== 0 ? s.mTopBorder : ""
-              } ${s.firstRow}`}
+              }  ${s.firstRow} `}
             >
-              <th colSpan='2'>
+              <th
+                colSpan='2'
+                className={`${index !== 0 ? s.paddingRowElement : ""}`}
+              >
                 {nft.position}.&nbsp;
                 {nft.nftName}
               </th>
-              <td>{nft.price} ETH</td>
+              <td className={`${index !== 0 ? s.paddingRowElement : ""}`}>
+                {nft.price} ETH
+              </td>
             </tr>
             <tr className={` ${index % 2 !== 0 ? s.highlighted : ""}`}>
-              <td rowSpan='3'>
+              <td
+                rowSpan='3'
+                className={s.avatar}
+              >
                 <img
                   src={nft.avatar}
                   alt={`Avatar for ${nft.nftName}`}
                 />
               </td>
-              <th className={s.mHeader}>Rarity:</th>
+              <th className={`${s.mHeader} ${s.columnPadding}`}>Rarity:</th>
               <td className={s.mData}>{nft.rarityLevel}</td>
             </tr>
             <tr className={` ${index % 2 !== 0 ? s.highlighted : ""}`}>
-              <th className={s.mHeader}>Total games:</th>
+              <th className={`${s.mHeader} ${s.columnPadding}`}>
+                Total games:
+              </th>
               <td className={s.mData}>{nft.totalGames}</td>
             </tr>
             <tr
               className={`${index % 2 !== 0 ? s.highlighted : ""} ${
                 index % 2 !== 0 ? s.mBottomBorder : ""
-              }`}
+              } `}
             >
-              <th className={s.mHeader}>Games Won:</th>
-              <td className={s.mData}>{nft.gamesWon}</td>
+              <th className={`${s.mHeader} ${s.lastRowPadding}`}>Games Won:</th>
+              <td className={`${s.mData} ${s.lastRowPadding}`}>
+                {nft.gamesWon}
+              </td>
             </tr>
           </React.Fragment>
         ))}
@@ -268,13 +172,13 @@ export const TopNFTs = () => {
 
   return (
     <Section id={"top-nfts"}>
-      <Container>
-        <Title
-          text={"Top NFTs"}
-          number={"02"}
-        />
+      <Title
+        text={"Top NFTs"}
+        number={"02"}
+      />
+      <div className={s.container}>
         {windowWidth < 744 ? renderMobileTable() : renderDesktopTable()}
-      </Container>
+      </div>
     </Section>
   );
 };

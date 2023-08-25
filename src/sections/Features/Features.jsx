@@ -73,6 +73,7 @@ export const Features = () => {
                     src={card.link}
                     target='_blank'
                     rel='noreferrer noopener'
+                    className={s.buttonLink}
                   >
                     <button className={s.button}>
                       <img

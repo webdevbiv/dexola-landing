@@ -1,5 +1,12 @@
-import { lazy } from "react";
-import { Features, Footer, Header, JoinUs, Hero, Main } from "../sections";
+import {
+  Features,
+  TopNFTs,
+  Footer,
+  Header,
+  JoinUs,
+  Hero,
+  Main,
+} from "../sections";
 
 // const Main = lazy(() => import("../sections"));
 // const Hero = lazy(() => import("../sections"));
@@ -11,7 +18,7 @@ function App() {
       <Main>
         <Hero />
         <Features />
-        {/* <TopNFTs /> */}
+        <TopNFTs />
         {/* <JoinUs /> */}
       </Main>
       {/* <Footer /> */}
