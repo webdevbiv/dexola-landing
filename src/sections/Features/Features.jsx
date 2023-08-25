@@ -1,15 +1,15 @@
 import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import s from "./Features.module.scss";
-import img01 from "../../images/star-runner/01.png";
-import img02 from "../../images/star-runner/02.png";
-import img03 from "../../images/star-runner/03.png";
+import imgMobile01 from "../../images/features/mobile/(1).webp";
+import imgMobile02 from "../../images/features/mobile/(2).webp";
+import imgMobile03 from "../../images/features/mobile/(3).webp";
 import arrow from "../../images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 
 const cards = [
   {
-    img: img01,
+    imgMobile: imgMobile01,
     alt: "star runner nft image",
     number: "01",
     title: "STRU Token sale",
@@ -17,7 +17,7 @@ const cards = [
     link: "",
   },
   {
-    img: img02,
+    imgMobile: imgMobile02,
     alt: "star runner nft image",
     number: "02",
     title: "Staking",
@@ -25,7 +25,7 @@ const cards = [
     link: "",
   },
   {
-    img: img03,
+    imgMobile: imgMobile03,
     alt: "star runner nft image",
     number: "03",
     title: "NFT minting",
@@ -36,11 +36,11 @@ const cards = [
 export const Features = () => {
   return (
     <Section id={"features"}>
-      <Container>
-        <Title
-          text={"Features"}
-          number={"01"}
-        />
+      <Title
+        text={"Features"}
+        number={"01"}
+      />
+      <div className={s.containerText}>
         <div className={s.description}>
           <h3 className={s.subTitle}>About StarRunner</h3>
           <p className={s.text}>
@@ -49,19 +49,16 @@ export const Features = () => {
             creativity of its players.
           </p>
         </div>
+      </div>
+      <div className={s.containerCardsList}>
         <ul className={s.cardsList}>
           {cards.map((card) => (
             <li
               className={s.card}
               key={card.number}
             >
-              <div
-                style={{
-                  backgroundImage: `url(${card.img})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                // src={card.img}
+              <img
+                src={card.imgMobile}
                 className={s.cardImage}
                 alt={card.alt}
               />
@@ -91,7 +88,7 @@ export const Features = () => {
             </li>
           ))}
         </ul>
-      </Container>
+      </div>
     </Section>
   );
 };

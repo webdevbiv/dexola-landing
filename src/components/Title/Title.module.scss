@@ -1,50 +1,65 @@
 @import "../../styles/mixins.scss";
 
+// .title {
+//   position: relative; // Positioning context for pseudo-elements
+//   display: flex;
+//   justify-content: space-between;
+//   padding-bottom: 12px;
+//   margin-bottom: 32px;
+
+//   @include text-title-mobile;
+
+//   // Pseudo element for the left side of the border
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     width: 100vw; // Full viewport width
+//     border-bottom: 1px solid $white;
+//     transform: translateX(-50%);
+//   }
+
+//   // Pseudo element for the right side of the border
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     right: 50%;
+//     width: 100vw; // Full viewport width
+//     border-bottom: 1px solid $white;
+//     transform: translateX(50%);
+//   }
+
+//   @media screen and (min-width: 744px) {
+//     @include text-title-tablet;
+//     line-height: 140px;
+//     margin-bottom: 56px;
+//     border-bottom: 1px solid $white;
+//     // Hide the pseudo elements on screens larger than 744px
+//     &::before,
+//     &::after {
+//       content: none;
+//     }
+//   }
+
+//   @media screen and (min-width: 1440px) {
+//     @include text-title-web;
+//     margin-bottom: 90px;
+//   }
+// }
+
+.containerMobile {
+  margin: 0 auto;
+}
+
 .title {
-  position: relative; // Positioning context for pseudo-elements
+  @include text-title-mobile($white);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
+
+  padding: 0 24px 16px 24px;
   margin-bottom: 32px;
 
-  @include text-title-mobile;
-
-  // Pseudo element for the left side of the border
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 100vw; // Full viewport width
-    border-bottom: 1px solid $white;
-    transform: translateX(-50%);
-  }
-
-  // Pseudo element for the right side of the border
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    width: 100vw; // Full viewport width
-    border-bottom: 1px solid $white;
-    transform: translateX(50%);
-  }
-
-  @media screen and (min-width: 744px) {
-    @include text-title-tablet;
-    line-height: 140px;
-    margin-bottom: 56px;
-    border-bottom: 1px solid $white;
-    // Hide the pseudo elements on screens larger than 744px
-    &::before,
-    &::after {
-      content: none;
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    @include text-title-web;
-    margin-bottom: 90px;
-  }
+  border-bottom: 1px solid $white;
 }

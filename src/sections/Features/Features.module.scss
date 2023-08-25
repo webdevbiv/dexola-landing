@@ -1,7 +1,14 @@
 @import "../../styles/mixins.scss";
 
+.containerText {
+  margin: 0 auto;
+  padding: 0 24px 0 24px;
+  margin-bottom: 24px;
+}
+
 .description {
   display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 744px) {
     justify-content: space-between;
@@ -14,9 +21,13 @@
 }
 
 .subTitle {
+  @include text-sub-title-mobile;
+  margin-bottom: 12px;
+
   @media screen and (min-width: 744px) {
     @include text-sub-title-tablet;
   }
+
   @media screen and (min-width: 1440px) {
     @include text-sub-title-web;
     margin-right: 24px;
@@ -24,7 +35,7 @@
 }
 
 .text {
-  color: $light-gray;
+  @include text-body-mobile($light-gray);
 
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
@@ -36,8 +47,14 @@
   }
 }
 
+.containerCardsList {
+  margin: 0 auto;
+  padding: 0 22px 0 24px;
+}
+
 .cardsList {
   display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 744px) {
     gap: 16px;

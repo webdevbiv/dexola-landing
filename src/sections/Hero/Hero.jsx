@@ -67,7 +67,7 @@ export const Hero = () => {
   if (windowWidth < 1440) {
     return (
       <Section id={"hero"}>
-        <Container>
+        <div className={s.containerPictures}>
           <div className={s.wrapperTablet}>
             <div
               key={windowWidth < 744 ? "mobile" : "tablet"}
@@ -83,13 +83,13 @@ export const Hero = () => {
               />
             </div>
           </div>
-        </Container>
+        </div>
         <HeroTitle />
-        <Container>
+        <div className={s.containerText}>
           <div className={s.wrapperTablet}>
             <Text />
           </div>
-        </Container>
+        </div>
       </Section>
     );
   }

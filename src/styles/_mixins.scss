@@ -26,6 +26,8 @@
   font-style: normal;
   line-height: normal;
   text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 // SubTitle text
@@ -50,10 +52,12 @@
 @mixin text-sub-title-mobile($color: $white) {
   color: $color;
   font-family: $font-kanit-500;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
-  line-height: 140%;
+  line-height: 22.4px;
   text-transform: capitalize;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 // Body text
@@ -81,6 +85,7 @@
   font-size: 14px;
   font-style: normal;
   line-height: normal;
+  font-weight: 400;
   letter-spacing: -0.28px;
 }
 

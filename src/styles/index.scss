@@ -3,7 +3,9 @@
 @import "./_mixins.scss";
 
 html {
+  @include text-body-mobile($white);
   scroll-behavior: smooth;
+
   color: $white;
 }
 

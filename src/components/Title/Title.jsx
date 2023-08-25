@@ -2,10 +2,12 @@ import PropTypes from "prop-types";
 import s from "./Title.module.scss";
 export const Title = ({ text, number }) => {
   return (
-    <h2 className={s.title}>
-      <span>{text}</span>
-      <span>{number}</span>
-    </h2>
+    <div className={s.container}>
+      <h2 className={s.title}>
+        <span>{text}</span>
+        <span>{number}</span>
+      </h2>
+    </div>
   );
 };
 
