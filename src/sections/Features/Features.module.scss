@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 0 24px 0 24px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 744px) {
+    margin-bottom: 40px;
+  }
 }
 
 .description {
@@ -11,6 +15,7 @@
   flex-direction: column;
 
   @media screen and (min-width: 744px) {
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 40px;
   }
@@ -25,7 +30,14 @@
   margin-bottom: 12px;
 
   @media screen and (min-width: 744px) {
+    min-width: 221px;
+
     @include text-sub-title-tablet;
+
+    white-space: nowrap;
+
+    margin-bottom: 0;
+    margin-right: 15px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -38,8 +50,9 @@
   @include text-body-mobile($light-gray);
 
   @media screen and (min-width: 744px) {
+    display: block;
+    box-sizing: border-box;
     @include text-body-tablet($light-gray);
-    max-width: 460px;
   }
   @media screen and (min-width: 1440px) {
     @include text-body-web($light-gray);
@@ -50,6 +63,10 @@
 .containerCardsList {
   margin: 0 auto;
   padding: 0 22px 0 24px;
+
+  @media screen and (min-width: 744px) {
+    padding: 0 24px;
+  }
 }
 
 .cardsList {
@@ -58,6 +75,7 @@
   gap: 16px;
 
   @media screen and (min-width: 744px) {
+    flex-direction: row;
     gap: 16px;
   }
   @media screen and (min-width: 1440px) {
@@ -70,11 +88,23 @@
   flex-direction: column;
   outline: 1px solid $accent-blue;
   width: 100%;
+
+  @media screen and (min-width: 744px) {
+    justify-content: space-between;
+  }
+}
+
+.wrapperCardContent {
+  width: 100%;
+  margin-bottom: 24px;
+  @media screen and (min-width: 744px) {
+    margin-bottom: 16px;
+  }
 }
 
 .cardImage {
+  width: 100%;
   @media screen and (min-width: 744px) {
-    height: 240px;
   }
   @media screen and (min-width: 1440px) {
     height: 307px;
@@ -82,9 +112,9 @@
 }
 
 .cardContent {
-  padding: 16px 16px 24px 16px;
+  padding: 16px 16px 0px 16px;
   @media screen and (min-width: 744px) {
-    padding: 16px;
+    padding: 16px 16px 0px 16px;
   }
   @media screen and (min-width: 1440px) {
     padding: 24px 0 24px 24px;
@@ -93,11 +123,12 @@
   h4 {
     @include text-sub-title-mobile;
     margin-bottom: 16px;
+
     @media screen and (min-width: 744px) {
       @include text-sub-title-tablet;
       line-height: 28px;
-      margin-bottom: 16px;
     }
+
     @media screen and (min-width: 1440px) {
       @include text-sub-title-web;
       line-height: 33.6px;
@@ -108,8 +139,13 @@
     &:first-child {
       margin-right: 16px;
     }
+
     @media screen and (min-width: 744px) {
       display: flex;
+
+      &:first-child {
+        margin-right: 0px;
+      }
     }
     @media screen and (min-width: 1440px) {
       &:first-child {
@@ -119,23 +155,30 @@
   }
 
   p {
+    width: 100%;
     @include text-body-mobile($light-gray);
-    margin-bottom: 24px;
 
     @media screen and (min-width: 744px) {
-      max-width: 189px;
-      margin-bottom: 16px;
+      @include text-body-tablet($light-gray);
     }
+
     @media screen and (min-width: 1440px) {
       max-width: 344px;
     }
   }
 }
 
-.buttonWrapper {
+.wrapperButton {
   display: flex;
   justify-content: center;
   width: 100%;
+
+  @media screen and (min-width: 744px) {
+    padding: 0px 16px 16px 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .buttonLink {

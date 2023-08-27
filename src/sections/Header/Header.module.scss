@@ -11,10 +11,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 4px 0 13px 0;
   align-items: center;
+
+  padding: 4px 24px 13px 24px;
+
   @media screen and (min-width: 744px) {
-    padding: 15px 0;
+    padding: 15px 22px;
   }
 }
 

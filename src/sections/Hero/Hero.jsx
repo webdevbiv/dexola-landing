@@ -68,27 +68,23 @@ export const Hero = () => {
     return (
       <Section id={"hero"}>
         <div className={s.containerPictures}>
-          <div className={s.wrapperTablet}>
-            <div
-              key={windowWidth < 744 ? "mobile" : "tablet"}
-              className={s.collectionImages}
-            >
-              <ImageFader
-                images={windowWidth < 744 ? mobile01 : tablet01}
-                delay={0}
-              />
-              <ImageFader
-                images={windowWidth < 744 ? mobile02 : tablet02}
-                delay={1000}
-              />
-            </div>
+          <div
+            key={windowWidth < 744 ? "mobile" : "tablet"}
+            className={s.collectionImages}
+          >
+            <ImageFader
+              images={windowWidth < 744 ? mobile01 : tablet01}
+              delay={0}
+            />
+            <ImageFader
+              images={windowWidth < 744 ? mobile02 : tablet02}
+              delay={1000}
+            />
           </div>
         </div>
         <HeroTitle />
         <div className={s.containerText}>
-          <div className={s.wrapperTablet}>
-            <Text />
-          </div>
+          <Text />
         </div>
       </Section>
     );

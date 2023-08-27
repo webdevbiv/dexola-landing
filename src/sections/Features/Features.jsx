@@ -1,15 +1,19 @@
-import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import s from "./Features.module.scss";
 import imgMobile01 from "../../images/features/mobile/(1).webp";
 import imgMobile02 from "../../images/features/mobile/(2).webp";
 import imgMobile03 from "../../images/features/mobile/(3).webp";
+import imgTablet01 from "../../images/features/tablet/01.webp";
+import imgTablet02 from "../../images/features/tablet/02.webp";
+import imgTablet03 from "../../images/features/tablet/03.webp";
 import arrow from "../../images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
+import { useEffect, useState } from "react";
 
 const cards = [
   {
     imgMobile: imgMobile01,
+    imgTablet: imgTablet01,
     alt: "star runner nft image",
     number: "01",
     title: "STRU Token sale",
@@ -18,6 +22,7 @@ const cards = [
   },
   {
     imgMobile: imgMobile02,
+    imgTablet: imgTablet02,
     alt: "star runner nft image",
     number: "02",
     title: "Staking",
@@ -26,6 +31,7 @@ const cards = [
   },
   {
     imgMobile: imgMobile03,
+    imgTablet: imgTablet03,
     alt: "star runner nft image",
     number: "03",
     title: "NFT minting",
@@ -34,6 +40,16 @@ const cards = [
   },
 ];
 export const Features = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowWidth]);
+
   return (
     <Section id={"features"}>
       <Title
@@ -57,34 +73,40 @@ export const Features = () => {
               className={s.card}
               key={card.number}
             >
-              <img
-                src={card.imgMobile}
-                className={s.cardImage}
-                alt={card.alt}
-              />
-              <div className={s.cardContent}>
-                <h4>
-                  <span>{card.number}</span>
-                  <span>{card.title}</span>
-                </h4>
-                <p>{card.text}</p>
-                <div className={s.buttonWrapper}>
-                  <a
-                    src={card.link}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                    className={s.buttonLink}
-                  >
-                    <button className={s.button}>
-                      <img
-                        src={arrow}
-                        alt='join-now'
-                        className={s.arrow}
-                      />
-                      <span>discover now</span>
-                    </button>
-                  </a>
+              <div className={s.wrapperCardContent}>
+                <img
+                  src={
+                    windowWidth >= 744 && windowWidth < 1440
+                      ? card.imgTablet
+                      : `${card.imgMobile}`
+                  }
+                  className={s.cardImage}
+                  alt={card.alt}
+                />
+                <div className={s.cardContent}>
+                  <h4>
+                    <span>{card.number}</span>
+                    <span>{card.title}</span>
+                  </h4>
+                  <p>{card.text}</p>
                 </div>
+              </div>
+              <div className={s.wrapperButton}>
+                <a
+                  src={card.link}
+                  target='_blank'
+                  rel='noreferrer noopener'
+                  className={s.buttonLink}
+                >
+                  <button className={s.button}>
+                    <img
+                      src={arrow}
+                      alt='join-now'
+                      className={s.arrow}
+                    />
+                    <span>discover now</span>
+                  </button>
+                </a>
               </div>
             </li>
           ))}

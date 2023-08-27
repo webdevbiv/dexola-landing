@@ -1,11 +1,5 @@
 @import "../../styles/mixins.scss";
 
-.containerPictures {
-  margin: 0 auto;
-  padding-left: 22px;
-  overflow: hidden;
-}
-
 .border {
   position: relative;
   margin-top: 1px;
@@ -30,6 +24,10 @@
   margin: 0 auto;
   padding-left: 24px;
   overflow: hidden;
+
+  @media screen and (min-width: 744px) {
+    padding: 0 38px 0 31px;
+  }
 }
 
 .text {
@@ -62,24 +60,24 @@
 
 .runningText {
   font-family: $font-kanit-500;
-
-  font-style: normal;
-
-  white-space: nowrap;
-  animation: marquee-375 15s linear infinite;
-
   font-size: 120px;
-  line-height: 150.5px;
+  line-height: 179px;
   letter-spacing: 0;
   font-weight: 500;
-  margin: 15px 0;
+  font-style: normal;
+  white-space: nowrap;
+
+  animation: marquee-375 15s linear infinite;
 
   @media screen and (min-width: 744px) {
     font-size: 280px;
-    line-height: 100%;
-    margin: 13px 0;
-    animation-name: marquee-744;
+    line-height: 306px;
+
+    margin: 0;
+
+    animation: marquee-744 15s linear infinite;
   }
+
   @media screen and (min-width: 1440px) {
     font-size: 340px;
     line-height: 426.36px;
@@ -101,7 +99,7 @@
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-240%);
+    transform: translateX(-260%);
   }
 }
 
@@ -111,5 +109,18 @@
   }
   100% {
     transform: translateX(-150%);
+  }
+}
+
+//styles below 1440
+.containerPictures {
+  margin: 0 auto;
+  padding-left: 22px;
+
+  overflow: hidden;
+  @media screen and (min-width: 744px) {
+    padding-top: 9px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

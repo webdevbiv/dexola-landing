@@ -1,15 +1,15 @@
 .section {
+  margin-bottom: 89px;
   &:first-child {
     margin-bottom: 148px;
   }
-  &:not(:first-child) {
-    margin-bottom: 89px;
-  }
+
   @media screen and (min-width: 744px) {
     &:not(:last-child) {
-      padding-bottom: 90px;
+      margin-bottom: 148px;
     }
   }
+
   @media screen and (min-width: 1440px) {
     &:not(:last-child) {
       padding-bottom: 66px;

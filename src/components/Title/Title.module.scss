@@ -49,17 +49,31 @@
 //   }
 // }
 
-.containerMobile {
+.container {
   margin: 0 auto;
+
+  @media screen and (min-width: 744px) {
+    padding: 0 24px;
+  }
 }
 
 .title {
-  @include text-title-mobile($white);
   display: flex;
   justify-content: space-between;
+
+  @include text-title-mobile($white);
 
   padding: 0 24px 16px 24px;
   margin-bottom: 32px;
 
   border-bottom: 1px solid $white;
+
+  @media screen and (min-width: 744px) {
+    @include text-title-tablet($white);
+    line-height: 140px;
+
+    padding: 0;
+    padding-bottom: 16px;
+    margin-bottom: 56px;
+  }
 }

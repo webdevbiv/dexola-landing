@@ -6,34 +6,32 @@ import s from "./Header.module.scss";
 export const Header = () => {
   return (
     <header>
-      <Container>
-        <div className={s.wrapper}>
-          <a
-            href='https://dexola.com/'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
+      <div className={s.wrapper}>
+        <a
+          href='https://dexola.com/'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <img
+            src={logo}
+            alt='logo'
+            className={s.logo}
+          />
+        </a>
+        <a
+          href='#join-us'
+          className={s.buttonLink}
+        >
+          <button className={s.button}>
             <img
-              src={logo}
-              alt='logo'
-              className={s.logo}
+              src={arrow}
+              alt='join-now'
+              className={s.arrow}
             />
-          </a>
-          <a
-            href='#join-us'
-            className={s.buttonLink}
-          >
-            <button className={s.button}>
-              <img
-                src={arrow}
-                alt='join-now'
-                className={s.arrow}
-              />
-              <span>Join Now</span>
-            </button>
-          </a>
-        </div>
-      </Container>
+            <span>Join Now</span>
+          </button>
+        </a>
+      </div>
     </header>
   );
 };
