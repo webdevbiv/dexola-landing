@@ -60,9 +60,9 @@ export const Features = () => {
         <div className={s.description}>
           <h3 className={s.subTitle}>About StarRunner</h3>
           <p className={s.text}>
-            The StarRunner Blockchain Ecosystem isn&#39;t a mere playground;
-            it&#39;s a living, evolving entity that adapts to the desires and
-            creativity of its players.
+            Prepare to be transported beyond the boundaries of traditional
+            gaming with the StarRunner Ecosystem – the beating heart that drives
+            the adrenaline-charged galactic P2E odyssey of &#39;StarRunner.&#39;
           </p>
         </div>
       </div>

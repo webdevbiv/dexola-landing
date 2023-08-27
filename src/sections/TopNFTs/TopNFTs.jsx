@@ -120,9 +120,9 @@ export const TopNFTs = () => {
         {topNfts.map((nft, index) => (
           <React.Fragment key={`mobile${index}`}>
             <tr
-              className={`${index % 2 !== 0 ? s.highlighted : ""} ${
-                index % 2 !== 0 ? s.mTopBorder : ""
-              }  ${s.firstRow} `}
+              className={`${index % 2 !== 0 ? s.highlighted : ""}  ${
+                s.firstRow
+              } `}
             >
               <th
                 colSpan='2'
@@ -146,17 +146,21 @@ export const TopNFTs = () => {
                 />
               </td>
               <th className={`${s.mHeader} ${s.columnPadding}`}>Rarity:</th>
-              <td className={s.mData}>{nft.rarityLevel}</td>
+              <td className={`${s.mData} ${s.columnPadding}`}>
+                {nft.rarityLevel}
+              </td>
             </tr>
             <tr className={` ${index % 2 !== 0 ? s.highlighted : ""}`}>
               <th className={`${s.mHeader} ${s.columnPadding}`}>
                 Total games:
               </th>
-              <td className={s.mData}>{nft.totalGames}</td>
+              <td className={`${s.mData} ${s.columnPadding}`}>
+                {nft.totalGames}
+              </td>
             </tr>
             <tr
-              className={`${index % 2 !== 0 ? s.highlighted : ""} ${
-                index % 2 !== 0 ? s.mBottomBorder : ""
+              className={`${s.lastRow} ${
+                index % 2 !== 0 ? s.highlighted : ""
               } `}
             >
               <th className={`${s.mHeader} ${s.lastRowPadding}`}>Games Won:</th>

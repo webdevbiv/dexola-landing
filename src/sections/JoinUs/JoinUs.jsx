@@ -82,10 +82,7 @@ const SignupSchema = Yup.object().shape({
 
 export const JoinUs = () => {
   return (
-    <section
-      id={"join-us"}
-      className={s.section}
-    >
+    <Section id={"join-us"}>
       <Title
         text={"Join Us"}
         number={"03"}
@@ -190,6 +187,6 @@ export const JoinUs = () => {
           </Formik>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

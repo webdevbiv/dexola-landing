@@ -8,9 +8,6 @@ import {
   Main,
 } from "../sections";
 
-// const Main = lazy(() => import("../sections"));
-// const Hero = lazy(() => import("../sections"));
-// const TopNFTs = lazy(() => import("../sections"));
 function App() {
   return (
     <>

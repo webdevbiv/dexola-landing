@@ -3,7 +3,7 @@
 .imageContainer {
   position: relative;
   width: 100%;
-  padding-bottom: 88.6%;
+  padding-bottom: 88.11%;
   left: 2px;
 
   @media screen and (min-width: 744px) {
@@ -12,7 +12,9 @@
   }
 
   @media screen and (min-width: 1440px) {
-    padding-bottom: 75.3%;
+    height: 311px;
+    width: 233px;
+    padding-bottom: 0;
   }
 
   &::before {

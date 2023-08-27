@@ -50,8 +50,15 @@ ul {
 
 body {
   background-color: $primary-background-color;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
+}
+
+br {
+  display: block;
+  content: " ";
+  margin-top: 0;
 }
