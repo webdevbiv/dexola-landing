@@ -67,7 +67,7 @@
 
 .containerCardsList {
   margin: 0 auto;
-  padding: 0 22px 0 24px;
+  padding: 0 24px 0 24px;
 
   @media screen and (min-width: 744px) {
     padding: 0 24px;
@@ -226,12 +226,14 @@
   width: 100%;
 
   padding: 16px 0;
+
   @media screen and (min-width: 744px) {
     flex: 1;
     line-height: 24px;
     letter-spacing: 0.32px;
     padding: 12px 23px;
   }
+
   @media screen and (min-width: 1440px) {
     padding: 12px 90px;
   }
@@ -240,6 +242,8 @@
 .arrow {
   width: 15px;
   height: 16px;
-
+  @media screen and (min-width: 1440px) {
+    width: 16.7px;
+  }
   margin-right: 6.5px;
 }
