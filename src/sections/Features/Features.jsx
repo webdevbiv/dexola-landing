@@ -6,6 +6,9 @@ import imgMobile03 from "../../images/features/mobile/(3).webp";
 import imgTablet01 from "../../images/features/tablet/01.webp";
 import imgTablet02 from "../../images/features/tablet/02.webp";
 import imgTablet03 from "../../images/features/tablet/03.webp";
+import imgWeb01 from "../../images/features/web/01.webp";
+import imgWeb02 from "../../images/features/web/02.webp";
+import imgWeb03 from "../../images/features/web/03.webp";
 import arrow from "../../images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 import { useEffect, useState } from "react";
@@ -14,6 +17,7 @@ const cards = [
   {
     imgMobile: imgMobile01,
     imgTablet: imgTablet01,
+    imgWeb: imgWeb01,
     alt: "star runner nft image",
     number: "01",
     title: "STRU Token sale",
@@ -23,6 +27,7 @@ const cards = [
   {
     imgMobile: imgMobile02,
     imgTablet: imgTablet02,
+    imgWeb: imgWeb02,
     alt: "star runner nft image",
     number: "02",
     title: "Staking",
@@ -32,6 +37,7 @@ const cards = [
   {
     imgMobile: imgMobile03,
     imgTablet: imgTablet03,
+    imgWeb: imgWeb03,
     alt: "star runner nft image",
     number: "03",
     title: "NFT minting",
@@ -60,9 +66,9 @@ export const Features = () => {
         <div className={s.description}>
           <h3 className={s.subTitle}>About StarRunner</h3>
           <p className={s.text}>
-            Prepare to be transported beyond the boundaries of traditional
-            gaming with the StarRunner Ecosystem – the beating heart that drives
-            the adrenaline-charged galactic P2E odyssey of &#39;StarRunner.&#39;
+            The StarRunner Blockchain Ecosystem isn&#39;t a mere playground;
+            it&#39;s a living, evolving entity that adapts to the desires and
+            creativity of its players.
           </p>
         </div>
       </div>
@@ -76,9 +82,11 @@ export const Features = () => {
               <div className={s.wrapperCardContent}>
                 <img
                   src={
-                    windowWidth >= 744 && windowWidth < 1440
+                    windowWidth >= 1440
+                      ? card.imgWeb
+                      : windowWidth >= 744 && windowWidth < 1440
                       ? card.imgTablet
-                      : `${card.imgMobile}`
+                      : card.imgMobile
                   }
                   className={s.cardImage}
                   alt={card.alt}

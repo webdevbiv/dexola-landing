@@ -6,14 +6,24 @@
   border-top: solid 1px $accent-blue;
 }
 
+.container {
+  margin: 0 auto;
+  @media screen and (min-width: 744px) {
+    padding: 0 24px;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column-reverse;
+
   @media screen and (min-width: 744px) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+
   @media screen and (min-width: 1440px) {
   }
 }
@@ -35,6 +45,12 @@
   justify-content: center;
 
   padding-bottom: 34px;
+
+  @media screen and (min-width: 744px) {
+    align-items: start;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
 }
 
 .link {
@@ -44,6 +60,7 @@
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
+
   @media screen and (min-width: 1440px) {
     @include text-body-web($white);
   }
@@ -51,9 +68,11 @@
 
 .text {
   @include text-body-mobile($light-gray);
+
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
+
   @media screen and (min-width: 1440px) {
     @include text-body-web($white);
   }
@@ -67,7 +86,10 @@
   padding-top: 12px;
   margin-bottom: 20px;
   @media screen and (min-width: 744px) {
-    padding: 34px 61.5px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 24px;
+    width: 50%;
   }
   @media screen and (min-width: 1440px) {
     padding: 35px 116px;

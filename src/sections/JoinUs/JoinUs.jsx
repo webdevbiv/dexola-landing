@@ -1,65 +1,6 @@
-// import { Container } from "../../components/Container/Container";
-// import { Section } from "../../components/Section/Section";
-// import { Title } from "../../components/Title/Title";
-// import s from "./JoinUs.module.scss";
-// import arrowImg from "../../images/icons/arrow-right.svg";
-
-// export const JoinUs = () => {
-//   return (
-//     <Section id={"join-us"}>
-//       <Container>
-//         <Title
-//           text={"Join Us"}
-//           number={"03"}
-//         />
-//         <div className={s.wrapper}>
-//           <div className={s.content}>
-//             <h3 className={s.title}>Experience the Power of StarRunner</h3>
-//             <p className={s.text}>
-//               Join Our Community and Embark on a Journey of Opportunities.
-//               Discover the full range of our services that cater to your needs.
-//               We&#39;ve got you covered with top-notch solutions.
-//             </p>
-//             <img
-//               src={arrowImg}
-//               alt='arrow right'
-//               className={s.arrow}
-//             />
-//           </div>
-//           <div className={s.content}>
-//             <form className={s.form}>
-//               <input
-//                 type='email'
-//                 placeholder='Enter your email'
-//               />
-//               <input
-//                 type='phone'
-//                 placeholder='Enter your phone number'
-//               />
-//               <input
-//                 type='password'
-//                 placeholder='Enter your password'
-//               />
-//               <input
-//                 type='password'
-//                 placeholder='Confirm your password'
-//               />
-//               <button type='submit'>
-//                 <img />
-//                 <span>Send it</span>
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       </Container>
-//     </Section>
-//   );
-// };
-
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
 import s from "./JoinUs.module.scss";
@@ -169,7 +110,7 @@ export const JoinUs = () => {
                     className={s.error}
                   />
                 </div>
-                <div>
+                <div className={s.buttonWrapper}>
                   <button
                     type='submit'
                     className={s.button}

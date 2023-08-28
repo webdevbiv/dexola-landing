@@ -73,7 +73,7 @@ export const Footer = () => {
     return (
       <footer>
         <div className={s.border}>
-          <Container>
+          <div className={s.container}>
             <div className={s.wrapper}>
               <div className={s.textWrapper}>
                 <a
@@ -107,7 +107,7 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
-          </Container>
+          </div>
         </div>
       </footer>
     );

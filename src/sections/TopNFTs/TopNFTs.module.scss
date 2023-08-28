@@ -1,6 +1,19 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/_mixins.scss";
 
+.container {
+  margin: 0 auto;
+
+  @media screen and (min-width: 744px) {
+    padding: 0 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 120px;
+    width: 1440px;
+  }
+}
+
 .table {
   table-layout: auto;
   border-collapse: collapse;
@@ -13,11 +26,13 @@
   thead {
     font-family: $font-kanit-500;
     font-weight: 500;
+
     @media screen and (min-width: 744px) {
       font-size: 20px;
       letter-spacing: 0;
       line-height: 28px;
     }
+
     @media screen and (min-width: 1440px) {
       font-size: 24px;
       letter-spacing: -0.48px;
@@ -29,15 +44,19 @@
       padding: 12px 16px;
 
       @media screen and (min-width: 744px) {
+        vertical-align: top;
+
         &:nth-child(3) {
           padding: 12px 16px;
         }
       }
+
       @media screen and (min-width: 1440px) {
         padding: 12px 24px;
       }
     }
   }
+
   img {
     display: block;
     width: 100%;
@@ -51,14 +70,17 @@
   border-top: 1px solid $accent-blue;
   border-bottom: 1px solid $accent-blue;
   line-height: normal;
+
   @media screen and (min-width: 744px) {
     font-size: 16px;
     letter-spacing: -0.32px;
   }
+
   @media screen and (min-width: 1440px) {
     font-size: 18px;
     letter-spacing: -0.36px;
   }
+
   tr {
     width: auto;
   }
@@ -70,13 +92,16 @@
     height: 100%;
     @media screen and (min-width: 744px) {
       line-height: normal;
+
       &:first-child {
         width: 64px;
         padding: 8px 0;
       }
+
       &:not(:first-child) {
         padding: 12px 24px;
       }
+
       &:nth-child(3) {
         padding: 12px 16px;
       }
@@ -96,10 +121,6 @@
 .mTopBorder {
   border-top: 1px solid $accent-blue;
 }
-
-// .mBottomBorder {
-//   border-bottom: 1px solid red;
-// }
 
 .mTable {
   border-collapse: collapse;

@@ -34,6 +34,20 @@
   }
 
   @media screen and (min-width: 1440px) {
-    margin-bottom: 126px;
+    &:nth-child(1) {
+      margin-bottom: 148px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 191px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 89px;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 69px;
+    }
   }
 }

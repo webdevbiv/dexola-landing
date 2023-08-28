@@ -80,6 +80,9 @@
   padding: 24px 16px;
 
   border: 1px solid $accent-blue;
+  @media screen and (min-width: 744px) {
+    padding: 55px 40px 54px 40px;
+  }
 
   @media screen and (min-width: 1440px) {
     padding: 55px 40px;
@@ -91,6 +94,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+
+  margin-bottom: 44px;
 
   &.requiredField::before {
     content: "*";
@@ -104,7 +109,7 @@
     letter-spacing: 0.32px;
 
     padding: 8px 0;
-    bottom: 54%;
+    bottom: 10%;
   }
 }
 
@@ -112,17 +117,15 @@
   width: 100%;
   background-color: transparent;
   border: none;
-  padding: 0;
-
   border-bottom: 1px solid $white;
 
   @include text-body-mobile($light-gray);
   padding: 8px 0 14px 30px;
-  margin-bottom: 44px;
 
   @media screen and (min-width: 744px) {
     @include text-body-tablet($light-gray);
   }
+
   @media screen and (min-width: 1440px) {
     @include text-body-web($light-gray);
 
@@ -148,6 +151,13 @@
   top: 42px;
 }
 
+.buttonWrapper {
+  @media screen and (min-width: 744px) {
+    display: flex;
+    align-items: start;
+  }
+}
+
 .button {
   @include button;
   display: flex;
@@ -162,6 +172,11 @@
   line-height: 24px;
   letter-spacing: 0.32px;
   text-transform: uppercase;
+
+  @media screen and (min-width: 744px) {
+    width: auto;
+    padding: 11px 66px 13px 54px;
+  }
 
   @media screen and (min-width: 1440px) {
     padding-left: 56px;
