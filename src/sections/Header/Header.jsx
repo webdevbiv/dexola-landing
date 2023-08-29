@@ -1,4 +1,3 @@
-import { Container } from "../../components/Container/Container";
 import logo from "../../images/icons/logo.svg";
 import arrow from "../../images/icons/button-arrow.svg";
 import s from "./Header.module.scss";

@@ -5,6 +5,7 @@ import { Section } from "../../components/Section/Section";
 import { web01, web02 } from "../../images/nfts/web/index.js";
 import { tablet01, tablet02 } from "../../images/nfts/tablet/index.js";
 import { mobile01, mobile02 } from "../../images/nfts/mobile/index.js";
+import { hero01 } from "../../images/hero/index.js";
 
 import s from "./Hero.module.scss";
 
@@ -73,7 +74,7 @@ export const Hero = () => {
             className={s.collectionImages}
           >
             <ImageFader
-              images={windowWidth < 744 ? mobile01 : tablet01}
+              images={hero01}
               delay={0}
             />
             <ImageFader
