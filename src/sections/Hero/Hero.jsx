@@ -78,7 +78,6 @@ export const Hero = () => {
               placeholder={mobile01[0]}
             />
             <ImageFader
-              // images={windowWidth < 744 ? mobile02 : tablet02}
               images={windowWidth < 500 ? mobile02 : hero02}
               placeholder={mobile02[0]}
               delay={1000}
