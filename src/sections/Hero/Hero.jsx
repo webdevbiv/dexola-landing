@@ -69,16 +69,16 @@ export const Hero = () => {
       <Section id={"hero"}>
         <div className={s.containerPictures}>
           <div
-            key={windowWidth < 500 ? "mobile" : "tablet"}
+            key={windowWidth < 420 ? "mobile" : "tablet"}
             className={s.collectionImages}
           >
             <ImageFader
-              images={windowWidth < 500 ? mobile01 : hero01}
+              images={windowWidth < 420 ? mobile01 : hero01}
               delay={0}
               placeholder={mobile01[0]}
             />
             <ImageFader
-              images={windowWidth < 500 ? mobile02 : hero02}
+              images={windowWidth < 420 ? mobile02 : hero02}
               placeholder={mobile02[0]}
               delay={1000}
             />
