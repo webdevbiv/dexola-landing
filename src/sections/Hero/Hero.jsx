@@ -3,7 +3,7 @@ import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
 import { web01, web02 } from "../../assets/images/hero/web/index.js";
 // import { tablet01, tablet02 } from "../../assets/images/hero/tablet/index.js";
-// import { mobile01, mobile02 } from "../../assets/images/hero/mobile/index.js";
+import { mobile01, mobile02 } from "../../assets/images/hero/mobile/index.js";
 import { hero01, hero02 } from "../../assets/images/hero/universal/index.js";
 
 import s from "./Hero.module.scss";
@@ -75,10 +75,12 @@ export const Hero = () => {
             <ImageFader
               images={hero01}
               delay={0}
+              placeholder={mobile01[0]}
             />
             <ImageFader
               // images={windowWidth < 744 ? mobile02 : tablet02}
               images={hero02}
+              placeholder={mobile02[0]}
               delay={1000}
             />
           </div>
