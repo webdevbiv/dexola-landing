@@ -1,3 +1,5 @@
+@import "../../styles/_variables.scss";
+
 .section {
   &:nth-child(1) {
     margin-bottom: 148px;
@@ -15,7 +17,7 @@
     margin-bottom: 69px;
   }
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     &:nth-child(1) {
       margin-bottom: 148px;
     }
@@ -33,7 +35,7 @@
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     &:nth-child(1) {
       margin-bottom: 148px;
     }
@@ -43,10 +45,11 @@
     }
 
     &:nth-child(3) {
-      margin-bottom: 191px;
+      margin-bottom: 113px;
     }
 
     &:nth-child(4) {
+      padding-top: 78px;
       margin-bottom: 125px;
     }
   }

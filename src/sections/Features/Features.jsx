@@ -1,48 +1,41 @@
 import { Section } from "../../components/Section/Section";
 import s from "./Features.module.scss";
-import imgMobile01 from "../../assets/images/features/mobile/(1).webp";
-import imgMobile02 from "../../assets/images/features/mobile/(2).webp";
-import imgMobile03 from "../../assets/images/features/mobile/(3).webp";
-import imgTablet01 from "../../assets/images/features/tablet/01.webp";
-import imgTablet02 from "../../assets/images/features/tablet/02.webp";
-import imgTablet03 from "../../assets/images/features/tablet/03.webp";
-import imgWeb01 from "../../assets/images/features/web/01.webp";
-import imgWeb02 from "../../assets/images/features/web/02.webp";
-import imgWeb03 from "../../assets/images/features/web/03.webp";
+
+import { imgsMobile, imgsTablet, imgsWeb } from "../../assets/images/features";
 import arrow from "../../assets/images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 import { useEffect, useState } from "react";
 
 const cards = [
   {
-    imgMobile: imgMobile01,
-    imgTablet: imgTablet01,
-    imgWeb: imgWeb01,
+    imgMobile: imgsMobile[0],
+    imgTablet: imgsTablet[0],
+    imgWeb: imgsWeb[0],
     alt: "star runner nft image",
     number: "01",
     title: "STRU Token sale",
     text: "The StarRunner Token the exclusive crypto currency fueling the adventure of the Play-to-Earn sensation.",
-    link: "",
+    link: "#join-us",
   },
   {
-    imgMobile: imgMobile02,
-    imgTablet: imgTablet02,
-    imgWeb: imgWeb02,
+    imgMobile: imgsMobile[1],
+    imgTablet: imgsTablet[1],
+    imgWeb: imgsWeb[1],
     alt: "star runner nft image",
     number: "02",
     title: "Staking",
     text: "Join a thriving community of stakers, united by their passion for exploration, strategy, and gaming.",
-    link: "",
+    link: "#join-us",
   },
   {
-    imgMobile: imgMobile03,
-    imgTablet: imgTablet03,
-    imgWeb: imgWeb03,
+    imgMobile: imgsMobile[2],
+    imgTablet: imgsTablet[2],
+    imgWeb: imgsWeb[2],
     alt: "star runner nft image",
     number: "03",
     title: "NFT minting",
     text: "Every StarRunner NFT tells a story – YOUR story. This NFT encapsulates the essence of your journey like never before.",
-    link: "",
+    link: "#join-us",
   },
 ];
 export const Features = () => {
@@ -101,9 +94,9 @@ export const Features = () => {
               </div>
               <div className={s.wrapperButton}>
                 <a
-                  src={card.link}
-                  target='_blank'
-                  rel='noreferrer noopener'
+                  href={card.link}
+                  // target='_blank'
+                  // rel='noreferrer noopener'
                   className={s.buttonLink}
                 >
                   <button className={s.button}>

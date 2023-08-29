@@ -24,6 +24,7 @@
     justify-content: space-between;
     margin-bottom: 40px;
   }
+
   @media screen and (min-width: $screen-web) {
     margin-bottom: 90px;
     justify-content: center;
@@ -59,6 +60,7 @@
     box-sizing: border-box;
     @include text-body-tablet($light-gray);
   }
+
   @media screen and (min-width: $screen-web) {
     @include text-body-web($light-gray);
     max-width: 601px;
@@ -88,6 +90,7 @@
     flex-direction: row;
     gap: 16px;
   }
+
   @media screen and (min-width: $screen-web) {
     gap: 40px;
   }
@@ -107,6 +110,7 @@
 .wrapperCardContent {
   width: 100%;
   margin-bottom: 24px;
+
   @media screen and (min-width: $screen-tablet) {
     margin-bottom: 16px;
   }
@@ -114,8 +118,10 @@
 
 .cardImage {
   width: 100%;
+
   @media screen and (min-width: $screen-tablet) {
   }
+
   @media screen and (min-width: $screen-web) {
     height: 307px;
   }
@@ -196,6 +202,7 @@
   justify-content: center;
   width: 100%;
   padding: 0 16px 24px 16px;
+
   @media screen and (min-width: $screen-tablet) {
     padding: 0px 16px 16px 16px;
   }
@@ -208,6 +215,8 @@
 .buttonLink {
   width: 100%;
   display: flex;
+
+  text-decoration: none;
 }
 
 .button {
@@ -242,8 +251,9 @@
 .arrow {
   width: 15px;
   height: 16px;
+  margin-right: 6.5px;
+
   @media screen and (min-width: $screen-web) {
     width: 16.7px;
   }
-  margin-right: 6.5px;
 }
