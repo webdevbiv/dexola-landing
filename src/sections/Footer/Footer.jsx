@@ -6,10 +6,14 @@ import telegram from "../../assets/images/icons/social-telegram.svg";
 import { useEffect, useState } from "react";
 
 const socialLinks = [
-  { icon: facebook, link: "", name: "facebook  icon image" },
-  { icon: instagram, link: "", name: "instagram icon image" },
-  { icon: discord, link: "", name: "discord icon image" },
-  { icon: telegram, link: "", name: "telegram icon image" },
+  { icon: facebook, link: "https://dexola.com/", name: "facebook  icon image" },
+  {
+    icon: instagram,
+    link: "https://dexola.com/",
+    name: "instagram icon image",
+  },
+  { icon: discord, link: "https://dexola.com/", name: "discord icon image" },
+  { icon: telegram, link: "https://dexola.com/", name: "telegram icon image" },
 ];
 
 export const Footer = () => {
