@@ -1,5 +1,5 @@
-import logo from "../../images/icons/logo.svg";
-import arrow from "../../images/icons/button-arrow.svg";
+import logo from "../../assets/images/icons/logo.svg";
+import arrow from "../../assets/images/icons/button-arrow.svg";
 import s from "./Header.module.scss";
 
 export const Header = () => {

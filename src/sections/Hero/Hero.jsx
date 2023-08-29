@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
-import { web01, web02 } from "../../images/nfts/web/index.js";
-import { tablet01, tablet02 } from "../../images/nfts/tablet/index.js";
-import { mobile01, mobile02 } from "../../images/nfts/mobile/index.js";
-import { hero01 } from "../../images/hero/index.js";
+import { web01, web02 } from "../../assets/images/nfts/web/index.js";
+import { tablet01, tablet02 } from "../../assets/images/nfts/tablet/index.js";
+import { mobile01, mobile02 } from "../../assets/images/nfts/mobile/index.js";
+import { hero01 } from "../../assets/images/hero/index.js";
 
 import s from "./Hero.module.scss";
 

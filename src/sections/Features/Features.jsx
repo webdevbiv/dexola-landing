@@ -1,15 +1,15 @@
 import { Section } from "../../components/Section/Section";
 import s from "./Features.module.scss";
-import imgMobile01 from "../../images/features/mobile/(1).webp";
-import imgMobile02 from "../../images/features/mobile/(2).webp";
-import imgMobile03 from "../../images/features/mobile/(3).webp";
-import imgTablet01 from "../../images/features/tablet/01.webp";
-import imgTablet02 from "../../images/features/tablet/02.webp";
-import imgTablet03 from "../../images/features/tablet/03.webp";
-import imgWeb01 from "../../images/features/web/01.webp";
-import imgWeb02 from "../../images/features/web/02.webp";
-import imgWeb03 from "../../images/features/web/03.webp";
-import arrow from "../../images/icons/button-arrow.svg";
+import imgMobile01 from "../../assets/images/features/mobile/(1).webp";
+import imgMobile02 from "../../assets/images/features/mobile/(2).webp";
+import imgMobile03 from "../../assets/images/features/mobile/(3).webp";
+import imgTablet01 from "../../assets/images/features/tablet/01.webp";
+import imgTablet02 from "../../assets/images/features/tablet/02.webp";
+import imgTablet03 from "../../assets/images/features/tablet/03.webp";
+import imgWeb01 from "../../assets/images/features/web/01.webp";
+import imgWeb02 from "../../assets/images/features/web/02.webp";
+import imgWeb03 from "../../assets/images/features/web/03.webp";
+import arrow from "../../assets/images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 import { useEffect, useState } from "react";
 

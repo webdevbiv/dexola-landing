@@ -1,8 +1,8 @@
 import s from "./Footer.module.scss";
-import facebook from "../../images/icons/social-facebook.svg";
-import instagram from "../../images/icons/social-instagram.svg";
-import discord from "../../images/icons/social-discord.svg";
-import telegram from "../../images/icons/social-telegram.svg";
+import facebook from "../../assets/images/icons/social-facebook.svg";
+import instagram from "../../assets/images/icons/social-instagram.svg";
+import discord from "../../assets/images/icons/social-discord.svg";
+import telegram from "../../assets/images/icons/social-telegram.svg";
 import { useEffect, useState } from "react";
 
 const socialLinks = [

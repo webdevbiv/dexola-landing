@@ -3,9 +3,11 @@ import * as Yup from "yup";
 
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
+
+import arrowSvg from "../../assets/images/icons/arrow-right.svg";
+import lineSvg from "../../assets/images/icons/button-line.svg";
+
 import s from "./JoinUs.module.scss";
-import arrowSvg from "../../images/icons/arrow-right.svg";
-import lineSvg from "../../images/icons/button-line.svg";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
