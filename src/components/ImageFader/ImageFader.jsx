@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import s from "./ImageFader.module.scss";
 
-export const ImageFader = ({ images, delay, placeholder }) => {
+export const ImageFader = ({ images, delay }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -24,9 +23,7 @@ export const ImageFader = ({ images, delay, placeholder }) => {
   return (
     <div className={s.imageContainer}>
       {images.map((src, index) => (
-        <LazyLoadImage
-          PlaceholderSrc={placeholder}
-          loading='lazy'
+        <img
           key={index}
           src={src}
           alt={`Nft image ${index}`}
