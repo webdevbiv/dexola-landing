@@ -69,7 +69,7 @@ export const Hero = () => {
       <Section id={"hero"}>
         <div className={s.containerPictures}>
           <div
-            // key={windowWidth < 744 ? "mobile" : "tablet"}
+            key={windowWidth < 500 ? "mobile" : "tablet"}
             className={s.collectionImages}
           >
             <ImageFader
