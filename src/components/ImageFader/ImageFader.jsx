@@ -24,6 +24,7 @@ export const ImageFader = ({ images, delay }) => {
     <div className={s.imageContainer}>
       {images.map((src, index) => (
         <img
+          loading='lazy'
           key={index}
           src={src}
           alt={`Nft image ${index}`}
