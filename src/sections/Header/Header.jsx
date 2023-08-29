@@ -6,7 +6,7 @@ import s from "./Header.module.scss";
 export const Header = () => {
   return (
     <header>
-      <div className={s.wrapper}>
+      <div className={s.container}>
         <a
           href='https://dexola.com/'
           target='_blank'
