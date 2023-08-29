@@ -15,6 +15,14 @@
   }
 }
 
+.containerWeb {
+  @media screen and (min-width: $screen-web) {
+    margin: 0 auto;
+    padding: 0 120px;
+    max-width: $screen-web;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -25,7 +33,7 @@
   padding: 0 24px 0 24px;
   overflow: hidden;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     padding: 0 38px 0 31px;
   }
 }
@@ -33,12 +41,12 @@
 .text {
   @include text-body-mobile;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet;
     padding-left: 0;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-body-web;
     padding-right: 70px;
     padding-top: 159px;
@@ -56,7 +64,7 @@
   overflow: hidden;
   width: 100%;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
   }
 }
 
@@ -71,7 +79,7 @@
 
   animation: marquee-375 15s linear infinite;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     font-size: 280px;
     line-height: 306px;
 
@@ -80,7 +88,7 @@
     animation: marquee-744 15s linear infinite;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     font-size: 340px;
     line-height: 398px;
     margin: 0;
@@ -92,7 +100,7 @@
   padding: 0 24px 0 24px;
 
   overflow: hidden;
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     padding-top: 9px;
     padding-left: 24px;
     padding-right: 24px;

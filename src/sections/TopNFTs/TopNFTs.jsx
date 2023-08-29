@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "../../components/Container/Container";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
 import img01 from "../../images/nfts/avatars/(1).webp";

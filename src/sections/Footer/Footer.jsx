@@ -1,4 +1,3 @@
-import { Container } from "../../components/Container/Container";
 import s from "./Footer.module.scss";
 import facebook from "../../images/icons/social-facebook.svg";
 import instagram from "../../images/icons/social-instagram.svg";
@@ -30,7 +29,7 @@ export const Footer = () => {
     return (
       <footer>
         <div className={s.border}>
-          <Container>
+          <div className={s.containerWeb}>
             <div className={s.wrapper}>
               <a
                 href='https://dexola.com/'
@@ -64,7 +63,7 @@ export const Footer = () => {
               </div>
               <p className={s.text}>© All rights reserved</p>
             </div>
-          </Container>
+          </div>
         </div>
       </footer>
     );

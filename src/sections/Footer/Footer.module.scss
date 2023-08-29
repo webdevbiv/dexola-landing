@@ -6,9 +6,17 @@
   border-top: solid 1px $accent-blue;
 }
 
+.containerWeb {
+  @media screen and (min-width: $screen-web) {
+    margin: 0 auto;
+    padding: 0 120px;
+    max-width: $screen-web;
+  }
+}
+
 .container {
   margin: 0 auto;
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     padding: 0 24px;
   }
 }
@@ -17,14 +25,14 @@
   display: flex;
   flex-direction: column-reverse;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
   }
 }
 
@@ -46,7 +54,7 @@
 
   padding-bottom: 34px;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     align-items: start;
     padding-top: 28px;
     padding-bottom: 28px;
@@ -57,11 +65,11 @@
   @include text-body-mobile($light-gray);
   text-decoration: none;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet($light-gray);
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-body-web($white);
   }
 }
@@ -69,11 +77,11 @@
 .text {
   @include text-body-mobile($light-gray);
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet($light-gray);
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-body-web($white);
   }
 }
@@ -85,13 +93,13 @@
   justify-content: center;
   padding-top: 12px;
   margin-bottom: 20px;
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     margin-bottom: 0;
     padding-top: 0;
     padding-left: 24px;
     width: 50%;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     padding: 35px 116px;
   }
 }
@@ -100,12 +108,12 @@
   &:not(:last-child) {
     margin-right: 32px;
   }
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     &:not(:last-child) {
       margin-right: 24px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     &:not(:last-child) {
       margin-right: 40px;
     }

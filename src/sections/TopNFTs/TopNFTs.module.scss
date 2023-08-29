@@ -4,13 +4,13 @@
 .container {
   margin: 0 auto;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     padding: 0 24px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     padding: 0 120px;
-    width: 1440px;
+    width: $screen-web;
   }
 }
 
@@ -27,13 +27,13 @@
     font-family: $font-kanit-500;
     font-weight: 500;
 
-    @media screen and (min-width: 744px) {
+    @media screen and (min-width: $screen-tablet) {
       font-size: 20px;
       letter-spacing: 0;
       line-height: 28px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $screen-web) {
       font-size: 24px;
       letter-spacing: -0.48px;
     }
@@ -43,7 +43,7 @@
       font-weight: 500;
       padding: 12px 16px;
 
-      @media screen and (min-width: 744px) {
+      @media screen and (min-width: $screen-tablet) {
         vertical-align: top;
 
         &:nth-child(3) {
@@ -51,7 +51,7 @@
         }
       }
 
-      @media screen and (min-width: 1440px) {
+      @media screen and (min-width: $screen-web) {
         padding: 12px 24px;
       }
     }
@@ -71,12 +71,12 @@
   border-bottom: 1px solid $accent-blue;
   line-height: normal;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     font-size: 16px;
     letter-spacing: -0.32px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     font-size: 18px;
     letter-spacing: -0.36px;
   }
@@ -90,7 +90,7 @@
     border: none;
     padding: 0;
     height: 100%;
-    @media screen and (min-width: 744px) {
+    @media screen and (min-width: $screen-tablet) {
       line-height: normal;
 
       &:first-child {
@@ -106,7 +106,7 @@
         padding: 12px 16px;
       }
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $screen-web) {
       &:not(:first-child) {
         padding: 13px 24px;
       }

@@ -3,9 +3,9 @@
 .container {
   margin: 0 auto;
   padding: 0 24px 0 24px;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     padding: 0 120px 0 120px;
-    width: 1440px;
+    width: $screen-web;
   }
 }
 
@@ -13,10 +13,10 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     flex-direction: column;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     flex-direction: row;
   }
 }
@@ -24,13 +24,13 @@
 .content {
   margin-bottom: 32px;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     margin-bottom: 56px;
     &:first-child {
       padding-right: 98px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     width: 50%;
     &:first-child {
       padding-right: 66px;
@@ -42,14 +42,14 @@
   @include text-sub-title-mobile;
   margin-bottom: 12px;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-sub-title-tablet;
     letter-spacing: 0;
     line-height: 28px;
     margin-bottom: 12px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-sub-title-web;
     letter-spacing: 0.48px;
     line-height: 32px;
@@ -60,10 +60,10 @@
 .text {
   @include text-body-mobile($light-gray);
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet($light-gray);
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-body-web($light-gray);
     line-height: 28px;
   }
@@ -72,7 +72,7 @@
 .arrow {
   margin-top: 40px;
   display: none;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     display: block;
   }
 }
@@ -84,11 +84,11 @@
   padding: 24px 16px;
 
   border: 1px solid $accent-blue;
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     padding: 55px 40px 54px 40px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     padding: 55px 40px;
     width: 50%;
   }
@@ -127,11 +127,11 @@
   @include text-body-mobile($light-gray);
   padding: 8px 0 14px 30px;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet($light-gray);
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     @include text-body-web($light-gray);
 
     padding-bottom: 8px;
@@ -156,7 +156,7 @@
 }
 
 .buttonWrapper {
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     display: flex;
     align-items: start;
   }
@@ -177,12 +177,12 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: $screen-tablet) {
     width: auto;
     padding: 11px 66px 13px 54px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $screen-web) {
     padding-left: 56px;
     padding-right: 71px;
     padding-top: 11px;

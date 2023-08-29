@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Container } from "../../components/Container/Container";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
 import { web01, web02 } from "../../images/nfts/web/index.js";
@@ -43,7 +42,7 @@ export const Hero = () => {
       <>
         <Section id={"hero"}>
           <div className={s.border}>
-            <Container>
+            <div className={s.containerWeb}>
               <div className={s.wrapper}>
                 <Text />
                 <div className={s.collectionImages}>
@@ -57,7 +56,7 @@ export const Hero = () => {
                   />
                 </div>
               </div>
-            </Container>
+            </div>
           </div>
           <HeroTitle />
         </Section>
