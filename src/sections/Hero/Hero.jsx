@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
-import { web01, web02 } from "../../assets/images/nfts/web/index.js";
-import { tablet01, tablet02 } from "../../assets/images/nfts/tablet/index.js";
-import { mobile01, mobile02 } from "../../assets/images/nfts/mobile/index.js";
-import { hero01 } from "../../assets/images/hero/index.js";
+import { web01, web02 } from "../../assets/images/hero/web/index.js";
+// import { tablet01, tablet02 } from "../../assets/images/hero/tablet/index.js";
+// import { mobile01, mobile02 } from "../../assets/images/hero/mobile/index.js";
+import { hero01, hero02 } from "../../assets/images/hero/universal/index.js";
 
 import s from "./Hero.module.scss";
 
@@ -69,7 +69,7 @@ export const Hero = () => {
       <Section id={"hero"}>
         <div className={s.containerPictures}>
           <div
-            key={windowWidth < 744 ? "mobile" : "tablet"}
+            // key={windowWidth < 744 ? "mobile" : "tablet"}
             className={s.collectionImages}
           >
             <ImageFader
@@ -77,7 +77,8 @@ export const Hero = () => {
               delay={0}
             />
             <ImageFader
-              images={windowWidth < 744 ? mobile02 : tablet02}
+              // images={windowWidth < 744 ? mobile02 : tablet02}
+              images={hero02}
               delay={1000}
             />
           </div>
