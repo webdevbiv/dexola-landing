@@ -120,7 +120,6 @@ export const JoinUs = () => {
                     <img
                       src={lineSvg}
                       alt='line'
-                      className={s.line}
                     />
                     <span>Send it</span>
                   </button>
