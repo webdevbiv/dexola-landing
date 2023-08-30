@@ -40,14 +40,18 @@ const cards = [
 ];
 export const Features = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+
+    window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, []);
 
   return (
     <Section id={"features"}>
@@ -77,7 +81,7 @@ export const Features = () => {
                   src={
                     windowWidth >= 1440
                       ? card.imgWeb
-                      : windowWidth >= 744 && windowWidth < 1440
+                      : windowWidth >= 420 && windowWidth < 1440
                       ? card.imgTablet
                       : card.imgMobile
                   }
@@ -95,8 +99,6 @@ export const Features = () => {
               <div className={s.wrapperButton}>
                 <a
                   href={card.link}
-                  // target='_blank'
-                  // rel='noreferrer noopener'
                   className={s.buttonLink}
                 >
                   <button className={s.button}>

@@ -26,6 +26,7 @@ export const ImageFader = ({ images, delay }) => {
         <img
           key={index}
           src={src}
+          loading='lazy'
           alt={`Nft image ${index}`}
           className={`${s.image} ${
             index === currentImageIndex ? s.active : ""
