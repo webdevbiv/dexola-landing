@@ -1,7 +1,12 @@
 import { Section } from "../../components/Section/Section";
 import s from "./Features.module.scss";
 
-import { imgsMobile, imgsTablet, imgsWeb } from "../../assets/images/features";
+import {
+  imgsMobile,
+  imgsMobileQuality,
+  imgsTabletQuality,
+  imgsWeb,
+} from "../../assets/images/features";
 import arrow from "../../assets/images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 import { useEffect, useState } from "react";
@@ -9,7 +14,8 @@ import { useEffect, useState } from "react";
 const cards = [
   {
     imgMobile: imgsMobile[0],
-    imgTablet: imgsTablet[0],
+    imgMobileQuality: imgsMobileQuality[0],
+    imgTablet: imgsTabletQuality[0],
     imgWeb: imgsWeb[0],
     alt: "star runner nft image",
     number: "01",
@@ -19,7 +25,8 @@ const cards = [
   },
   {
     imgMobile: imgsMobile[1],
-    imgTablet: imgsTablet[1],
+    imgMobileQuality: imgsMobileQuality[1],
+    imgTablet: imgsTabletQuality[1],
     imgWeb: imgsWeb[1],
     alt: "star runner nft image",
     number: "02",
@@ -29,7 +36,8 @@ const cards = [
   },
   {
     imgMobile: imgsMobile[2],
-    imgTablet: imgsTablet[2],
+    imgMobileQuality: imgsMobileQuality[2],
+    imgTablet: imgsTabletQuality[2],
     imgWeb: imgsWeb[2],
     alt: "star runner nft image",
     number: "03",
@@ -77,17 +85,22 @@ export const Features = () => {
               key={card.number}
             >
               <div className={s.wrapperCardContent}>
-                <img
-                  src={
-                    windowWidth >= 1440
-                      ? card.imgWeb
-                      : windowWidth >= 420 && windowWidth < 1440
-                      ? card.imgTablet
-                      : card.imgMobile
-                  }
-                  className={s.cardImage}
-                  alt={card.alt}
-                />
+                <div className={s.containerImage}>
+                  <img
+                    src={
+                      windowWidth >= 1440
+                        ? card.imgWeb
+                        : windowWidth >= 744 && windowWidth < 1440
+                        ? card.imgTablet
+                        : windowWidth >= 420 && windowWidth < 744
+                        ? card.imgMobileQuality
+                        : card.imgMobile
+                    }
+                    className={s.cardImage}
+                    alt={card.alt}
+                    loading='lazy'
+                  />
+                </div>
                 <div className={s.cardContent}>
                   <h4>
                     <span>{card.number}</span>
