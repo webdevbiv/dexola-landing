@@ -1,10 +1,24 @@
 import { useEffect, useState } from "react";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
 import { Section } from "../../components/Section/Section";
-import { web01, web02 } from "../../assets/images/hero/web/index.js";
-// import { tablet01, tablet02 } from "../../assets/images/hero/tablet/index.js";
-import { mobile01, mobile02 } from "../../assets/images/hero/mobile/index.js";
-import { hero01, hero02 } from "../../assets/images/hero/universal/index.js";
+import {
+  web01,
+  web02,
+  web01x2,
+  web02x2,
+} from "../../assets/images/hero/web/index.js";
+import {
+  mobile01,
+  mobile02,
+  mobile01x2,
+  mobile02x2,
+} from "../../assets/images/hero/mobile/index.js";
+import {
+  hero01,
+  hero02,
+  hero01x2,
+  hero02x2,
+} from "../../assets/images/hero/universal/index.js";
 
 import s from "./Hero.module.scss";
 
@@ -24,6 +38,8 @@ const HeroTitle = () => (
 
 export const Hero = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const isRetina = window.devicePixelRatio > 1;
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,11 +63,11 @@ export const Hero = () => {
                 <Text />
                 <div className={s.collectionImages}>
                   <ImageFader
-                    images={web01}
+                    images={isRetina ? web01x2 : web01}
                     delay={0}
                   />
                   <ImageFader
-                    images={web02}
+                    images={isRetina ? web02x2 : web02}
                     delay={1000}
                   />
                 </div>
@@ -73,12 +89,28 @@ export const Hero = () => {
             className={s.collectionImages}
           >
             <ImageFader
-              images={windowWidth < 420 ? mobile01 : hero01}
+              images={
+                windowWidth < 420
+                  ? isRetina
+                    ? mobile01x2
+                    : mobile01
+                  : isRetina
+                  ? hero01x2
+                  : hero01
+              }
               delay={0}
               placeholder={mobile01[0]}
             />
             <ImageFader
-              images={windowWidth < 420 ? mobile02 : hero02}
+              images={
+                windowWidth < 420
+                  ? isRetina
+                    ? mobile02x2
+                    : mobile02
+                  : isRetina
+                  ? hero02x2
+                  : hero02
+              }
               placeholder={mobile02[0]}
               delay={1000}
             />
