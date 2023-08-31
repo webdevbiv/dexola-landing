@@ -48,6 +48,9 @@
     width: 36px;
     height: 24px;
   }
+  &:focus {
+    box-shadow: $accent-blue;
+  }
 }
 
 .PhoneInputCountryIcon--border {
