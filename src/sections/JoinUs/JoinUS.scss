@@ -75,7 +75,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -1;
-  margin-left: 13px;
+  margin-left: 18px;
   height: 14px;
   width: 14px;
+  @media screen and (min-width: $screen-tablet) {
+    margin-left: 13px;
+  }
 }
