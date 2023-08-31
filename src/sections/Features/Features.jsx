@@ -10,6 +10,7 @@ import {
 import arrow from "../../assets/images/icons/button-arrow.svg";
 import { Title } from "../../components/Title/Title";
 import { useEffect, useState } from "react";
+import { Skeleton } from "../../components/Skeleton/Skeleton";
 
 const cards = [
   {
@@ -48,6 +49,7 @@ const cards = [
 ];
 export const Features = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [loadedImages, setLoadedImages] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,6 +62,9 @@ export const Features = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const handleImageLoad = (index) => {
+    setLoadedImages((prev) => [...prev, index]);
+  };
 
   return (
     <Section id={"features"}>
@@ -99,7 +104,9 @@ export const Features = () => {
                     className={s.cardImage}
                     alt={card.alt}
                     loading='lazy'
+                    onLoad={() => handleImageLoad(card.number)}
                   />
+                  {!loadedImages.includes(card.number) && <Skeleton />}
                 </div>
                 <div className={s.cardContent}>
                   <h4>
