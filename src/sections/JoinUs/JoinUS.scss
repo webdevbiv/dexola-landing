@@ -1,0 +1,73 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.PhoneInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white;
+}
+
+.PhoneInputInput {
+  background-color: transparent;
+  border: none;
+  @include text-body-mobile($light-gray);
+  padding: 8px 0 14px 0px;
+  &:focus {
+    outline: none;
+    color: $white;
+  }
+
+  @media screen and (min-width: $screen-tablet) {
+    @include text-body-tablet($light-gray);
+  }
+
+  @media screen and (min-width: $screen-web) {
+    @include text-body-web($light-gray);
+
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+}
+
+.PhoneInputCountry {
+  background-color: transparent;
+  width: 78px;
+  margin-right: 0;
+  margin-bottom: 7px;
+}
+
+.PhoneInputCountryIcon {
+  width: 30px;
+  height: 19px;
+}
+
+.PhoneInputCountryIcon--border {
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+}
+//image flag
+.PhoneInputCountryIconImg {
+  border-radius: 5px;
+}
+
+// icons
+.PhoneInputInternationalIconGlobe {
+  display: none;
+}
+
+//arrow down
+.PhoneInputCountrySelectArrow {
+  opacity: 1;
+  transform: none;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../assets/images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+  margin-left: 15px;
+  height: 14px;
+  width: 14px;
+}

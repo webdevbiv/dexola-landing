@@ -1,13 +1,15 @@
+import PhoneInput from "react-phone-number-input";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-
 import arrowSvg from "../../assets/images/icons/arrow-right.svg";
 import lineSvg from "../../assets/images/icons/button-line.svg";
 
+import "react-phone-number-input/style.css";
 import s from "./JoinUs.module.scss";
+import "./JoinUS.scss";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
@@ -58,7 +60,7 @@ export const JoinUs = () => {
               console.log(values);
             }}
           >
-            {({ errors, touched }) => (
+            {({ errors, touched, setFieldValue, values }) => (
               <Form className={s.form}>
                 <div className={`${s.inputWrapper} ${s.requiredField}`}>
                   <Field
@@ -74,11 +76,11 @@ export const JoinUs = () => {
                   />
                 </div>
                 <div className={s.inputWrapper}>
-                  <Field
-                    name='phoneNumber'
-                    type='text'
+                  <PhoneInput
+                    international
+                    value={values.phoneNumber}
+                    onChange={(value) => setFieldValue("phoneNumber", value)}
                     placeholder='Enter your phone number'
-                    className={s.input}
                   />
                   <ErrorMessage
                     name='phoneNumber'
