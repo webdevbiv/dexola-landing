@@ -2,7 +2,8 @@
 @import "../../styles/_mixins.scss";
 
 :root {
-  --PhoneInput-color--focus: $accent-blue;
+  --PhoneInput-color--focus: #204ffe;
+  --PhoneInputCountryFlag-borderColor--focus: #204ffe;
 }
 
 .PhoneInput {
