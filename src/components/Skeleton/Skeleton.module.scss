@@ -1,0 +1,19 @@
+@import "../../styles/_variables.scss";
+
+.skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: skeletonLoading 1s linear infinite alternate;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-color: $table-accent-blue;
+  }
+  100% {
+    background-color: $primary-background-color;
+  }
+}
