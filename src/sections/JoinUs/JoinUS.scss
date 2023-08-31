@@ -1,7 +1,8 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/_mixins.scss";
+
 :root {
-  --PhoneInput-color--focus: #204ffe;
+  --PhoneInput-color--focus: $accent-blue;
 }
 
 .PhoneInput {
