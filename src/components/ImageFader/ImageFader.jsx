@@ -84,7 +84,7 @@ export const ImageFader = ({ images, delay }) => {
               index === currentImageIndex ? s.active : ""
             } `}
           />
-          {loadedImages.includes(index) && <Skeleton />}
+          {!loadedImages.includes(index) && <Skeleton />}
         </div>
       ))}
     </div>
