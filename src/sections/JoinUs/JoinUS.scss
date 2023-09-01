@@ -49,12 +49,14 @@
 .PhoneInputCountryIcon {
   width: 30px;
   height: 19px;
+
+  &:focus {
+    box-shadow: $accent-blue;
+  }
+
   @media screen and (min-width: $screen-tablet) {
     width: 36px;
     height: 24px;
-  }
-  &:focus {
-    box-shadow: $accent-blue;
   }
 }
 
@@ -86,6 +88,7 @@
   margin-left: 18px;
   height: 14px;
   width: 14px;
+
   @media screen and (min-width: $screen-tablet) {
     margin-left: 13px;
   }
