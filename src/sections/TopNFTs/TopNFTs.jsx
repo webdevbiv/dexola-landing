@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-import img01 from "../../assets/images/nfts/avatars/(1).webp";
-import img02 from "../../assets/images/nfts/avatars/(2).webp";
-import img03 from "../../assets/images/nfts/avatars/(3).webp";
-import img04 from "../../assets/images/nfts/avatars/(4).webp";
-import img05 from "../../assets/images/nfts/avatars/(5).webp";
+import img01 from "../../assets/images/topNFTs/01.webp";
+import img02 from "../../assets/images/topNFTs/02.webp";
+import img03 from "../../assets/images/topNFTs/03.webp";
+import img04 from "../../assets/images/topNFTs/04.webp";
+import img05 from "../../assets/images/topNFTs/05.webp";
 import s from "./TopNFTs.module.scss";
 
 const topNfts = [
