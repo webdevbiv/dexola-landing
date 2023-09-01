@@ -13,6 +13,10 @@
   border-bottom: 1px solid $white;
 }
 
+.PhoneInputError {
+  border-color: $warning-rose;
+}
+
 .PhoneInputInput {
   background-color: transparent;
   border: none;

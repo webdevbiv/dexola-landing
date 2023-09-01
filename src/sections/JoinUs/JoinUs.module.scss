@@ -144,6 +144,9 @@
     padding-left: 30px;
   }
 }
+.errorBorder {
+  border-color: $warning-rose;
+}
 
 .error {
   position: absolute;
@@ -194,4 +197,9 @@
     width: 24px;
     height: 1.5px;
   }
+}
+
+.showPasswordEye {
+  position: absolute;
+  right: 0;
 }
