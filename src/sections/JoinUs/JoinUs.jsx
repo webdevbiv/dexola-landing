@@ -31,7 +31,9 @@ const SignupSchema = Yup.object().shape({
 });
 
 export const JoinUs = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [isShowPasswordConfirm, setIsShowPasswordConfirm] = useState(false);
+
   return (
     <Section id={"join-us"}>
       <Title
@@ -110,7 +112,7 @@ export const JoinUs = () => {
                 <div className={`${s.inputWrapper} ${s.requiredField}`}>
                   <Field
                     name='password'
-                    type={showPassword ? "text" : "password"}
+                    type={isShowPassword ? "text" : "password"}
                     placeholder='Enter your password'
                     className={`${s.input} ${
                       touched.password && errors.password ? s.errorBorder : ""
@@ -118,9 +120,9 @@ export const JoinUs = () => {
                   />
                   <span
                     className={s.showPasswordEye}
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={() => setIsShowPassword(!isShowPassword)}
                   >
-                    {showPassword ? (
+                    {isShowPassword ? (
                       <img src={eyeOpenSvg} />
                     ) : (
                       <img src={eyeClosedSvg} />
@@ -135,7 +137,7 @@ export const JoinUs = () => {
                 <div className={`${s.inputWrapper} ${s.requiredField}`}>
                   <Field
                     name='confirmPassword'
-                    type={showPassword ? "text" : "password"}
+                    type={isShowPasswordConfirm ? "text" : "password"}
                     placeholder='Confirm your password'
                     className={`${s.input} ${
                       touched.confirmPassword && errors.confirmPassword
@@ -145,12 +147,20 @@ export const JoinUs = () => {
                   />
                   <span
                     className={s.showPasswordEye}
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={() =>
+                      setIsShowPasswordConfirm(!isShowPasswordConfirm)
+                    }
                   >
-                    {showPassword ? (
-                      <img src={eyeOpenSvg} />
+                    {isShowPasswordConfirm ? (
+                      <img
+                        src={eyeOpenSvg}
+                        className={s.eye}
+                      />
                     ) : (
-                      <img src={eyeClosedSvg} />
+                      <img
+                        src={eyeClosedSvg}
+                        className={s.eye}
+                      />
                     )}
                   </span>
                   <ErrorMessage

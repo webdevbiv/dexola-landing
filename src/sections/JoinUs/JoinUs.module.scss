@@ -101,6 +101,9 @@
   align-items: center;
 
   margin-bottom: 44px;
+  &:focus-within + .eye {
+    border-color: $accent-blue;
+  }
 
   &.requiredField::before {
     content: "*";
@@ -148,6 +151,7 @@
     padding-left: 30px;
   }
 }
+
 .errorBorder {
   border-color: $warning-rose;
 }
@@ -206,4 +210,11 @@
 .showPasswordEye {
   position: absolute;
   right: 0;
+  cursor: pointer;
+  img {
+    fill: $accent-blue;
+    path {
+      fill: $accent-blue;
+    }
+  }
 }
