@@ -131,6 +131,10 @@
     outline: none;
     color: $white;
   }
+  &:hover,
+  &:focus-within {
+    border-color: $accent-blue;
+  }
 
   @media screen and (min-width: $screen-tablet) {
     @include text-body-tablet($light-gray);
