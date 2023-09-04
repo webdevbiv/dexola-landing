@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-import img01 from "../../assets/images/topNFTs/01.webp";
-import img02 from "../../assets/images/topNFTs/02.webp";
-import img03 from "../../assets/images/topNFTs/03.webp";
-import img04 from "../../assets/images/topNFTs/04.webp";
-import img05 from "../../assets/images/topNFTs/05.webp";
+import { avatars } from "../../assets/images/topNFTs/index";
 import s from "./TopNFTs.module.scss";
 
 const topNfts = [
   {
     position: 1,
-    avatar: img01,
+    avatar: avatars[0],
     nftName: "Legendary Artifact",
     rarityLevel: "Legendary",
     totalGames: 189,
@@ -20,7 +16,7 @@ const topNfts = [
   },
   {
     position: 2,
-    avatar: img02,
+    avatar: avatars[1],
     nftName: "Epic Warrior",
     rarityLevel: "Rare",
     totalGames: 134,
@@ -29,7 +25,7 @@ const topNfts = [
   },
   {
     position: 3,
-    avatar: img03,
+    avatar: avatars[2],
     nftName: "Mystic Spellbook",
     rarityLevel: "Common",
     totalGames: 133,
@@ -38,7 +34,7 @@ const topNfts = [
   },
   {
     position: 4,
-    avatar: img04,
+    avatar: avatars[3],
     nftName: "Common Potion",
     rarityLevel: "Heroic",
     totalGames: 87,
@@ -47,7 +43,7 @@ const topNfts = [
   },
   {
     position: 5,
-    avatar: img05,
+    avatar: avatars[4],
     nftName: "Heroic Blade",
     rarityLevel: "Epic",
     totalGames: 56,
