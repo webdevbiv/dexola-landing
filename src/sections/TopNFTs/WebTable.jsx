@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import s from "./TopNFTs.module.scss";
 
 export const WebTable = ({ data }) => (

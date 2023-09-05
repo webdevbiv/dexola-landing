@@ -1,20 +1,15 @@
-// Hooks
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 
-// Utils
 import { featuresCardsData as getCards } from "./featuresCardsData";
 
-// Assets
 import arrow from "../../assets/images/icons/button-arrow.svg";
 
-// Styles
 import s from "./Features.module.scss";
 
 export const FeaturesList = () => {
   const windowWidth = useWindowWidth();
   const isRetina = window.devicePixelRatio > 1;
   const cards = getCards(windowWidth, isRetina);
-  console.log(cards);
 
   return (
     <ul className={s.cardsList}>

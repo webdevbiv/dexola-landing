@@ -1,4 +1,3 @@
-// Constants/Utilities/Styles
 import s from "./Hero.module.scss";
 const title = "DEXOLA CAMP";
 

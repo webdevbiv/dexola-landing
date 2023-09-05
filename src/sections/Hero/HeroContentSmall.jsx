@@ -1,12 +1,9 @@
-// Hooks
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 
-// Components
 import { ImageFaders } from "./ImageFaders";
 import { HeroTitle } from "./HeroTitle";
 import { HeroText } from "./HeroText";
 
-// Constants/Utilities/Styles
 import s from "./Hero.module.scss";
 import { SMALL_SCREEN_BREAKPOINT } from "../../styles/breakpoints";
 

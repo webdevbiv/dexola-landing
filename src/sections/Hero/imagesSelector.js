@@ -1,4 +1,3 @@
-//Assets for Web
 import {
   web01,
   web02,
@@ -6,7 +5,6 @@ import {
   web02x2,
 } from "../../assets/images/hero/web/index.js";
 
-//Assets for Mobile
 import {
   mobile01,
   mobile02,
@@ -14,7 +12,6 @@ import {
   mobile02x2,
 } from "../../assets/images/hero/mobile/index.js";
 
-//Assets for Tablet
 import {
   tablet01,
   tablet02,
@@ -22,7 +19,6 @@ import {
   tablet02x2,
 } from "../../assets/images/hero/tablet/index.js";
 
-// Constants/Utilities/Styles
 import {
   LARGE_SCREEN_BREAKPOINT,
   SMALL_SCREEN_BREAKPOINT,

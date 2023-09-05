@@ -1,9 +1,7 @@
-// Components
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
 import { FeaturesList } from "./FeaturesList";
 
-// Styles
 import s from "./Features.module.scss";
 
 export const Features = () => {
