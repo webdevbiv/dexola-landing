@@ -13,10 +13,10 @@ export const Hero = () => {
   const windowWidth = useWindowWidth();
   const isRetina = window.devicePixelRatio > 1;
   const [firstImageSet, secondImageSet] = getImageSet(windowWidth, isRetina);
-  const HeroContent = windowWidth >= 1440 ? HeroContentLarge : HeroContentSmall;
-
+  const isLargeScreen = windowWidth >= 1440;
+  const HeroContent = isLargeScreen ? HeroContentLarge : HeroContentSmall;
   return (
-    <Section id={"hero"}>
+    <Section id='hero'>
       <HeroContent
         firstImageSet={firstImageSet}
         secondImageSet={secondImageSet}

@@ -1,0 +1,30 @@
+@import "../../styles/mixins.scss";
+
+.button {
+  @include button;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $font-roboto-500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  font-weight: 500;
+
+  padding: 10px 16px;
+  @media screen and (min-width: $screen-tablet) {
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    font-size: 16px;
+
+    padding: 12px 66px;
+  }
+}
+
+.arrow {
+  height: 16px;
+  width: 15.86px;
+  margin-right: 6.21px;
+}
