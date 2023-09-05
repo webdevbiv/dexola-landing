@@ -8,7 +8,6 @@ import {
   JoinUs,
   Hero,
   Main,
-  // Animation,
 } from "../sections";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <Header />
       <Main>
         <Hero />
-        {/* <Animation /> */}
         <Features />
         <TopNFTs />
         <JoinUs />
