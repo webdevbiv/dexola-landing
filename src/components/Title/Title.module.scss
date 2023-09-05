@@ -28,14 +28,11 @@
 
   @media screen and (min-width: 744px) {
     @include text-title-tablet($white);
-    line-height: 140px;
-
     padding: 0;
     padding-bottom: 16px;
   }
 
   @media screen and (min-width: 1440px) {
     @include text-title-web($white);
-    line-height: 140px;
   }
 }

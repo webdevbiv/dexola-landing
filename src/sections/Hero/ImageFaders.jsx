@@ -1,7 +1,11 @@
-import PropTypes from "prop-types";
 import { ImageFader } from "../../components/ImageFader/ImageFader";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { getImageSet } from "./imagesSelector";
 
-export const ImageFaders = ({ firstImageSet, secondImageSet }) => {
+export const ImageFaders = () => {
+  const windowWidth = useWindowWidth();
+  const isRetina = window.devicePixelRatio > 1;
+  const [firstImageSet, secondImageSet] = getImageSet(windowWidth, isRetina);
   return (
     <>
       <ImageFader
@@ -14,9 +18,4 @@ export const ImageFaders = ({ firstImageSet, secondImageSet }) => {
       />
     </>
   );
-};
-
-ImageFaders.propTypes = {
-  firstImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
-  secondImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

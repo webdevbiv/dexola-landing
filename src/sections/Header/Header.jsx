@@ -1,6 +1,9 @@
+// Components
 import { Logo } from "../../components/Logo/logo";
-import s from "./Header.module.scss";
 import { JoinNowButton } from "../../components/JoinUsButton/JoinNowButton";
+
+// Styles
+import s from "./Header.module.scss";
 
 export const Header = () => {
   return (

@@ -6,8 +6,8 @@
   font-family: $font-kanit-400;
   font-size: 140px;
   font-style: normal;
-  line-height: normal;
   text-transform: capitalize;
+  line-height: 140px;
 }
 
 @mixin text-title-tablet($color: $white) {
@@ -15,7 +15,7 @@
   font-family: $font-kanit-400;
   font-size: 112px;
   font-style: normal;
-  line-height: normal;
+  line-height: 140px;
   text-transform: capitalize;
 }
 

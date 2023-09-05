@@ -1,28 +1,25 @@
-//Hooks
+// Hooks
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 
-//Components
-import PropTypes from "prop-types";
+// Components
 import { ImageFaders } from "./ImageFaders";
 import { HeroTitle } from "./HeroTitle";
 import { HeroText } from "./HeroText";
 
-//Styles
+// Constants/Utilities/Styles
 import s from "./Hero.module.scss";
+import { SMALL_SCREEN_BREAKPOINT } from "../../styles/breakpoints";
 
-export const HeroContentSmall = ({ firstImageSet, secondImageSet }) => {
+export const HeroContentSmall = () => {
   const windowWidth = useWindowWidth();
   return (
     <>
       <div className={s.containerPictures}>
         <div
-          key={windowWidth < 420 ? "mobile" : "tablet"}
+          key={windowWidth < SMALL_SCREEN_BREAKPOINT ? "mobile" : "tablet"}
           className={s.collectionImages}
         >
-          <ImageFaders
-            firstImageSet={firstImageSet}
-            secondImageSet={secondImageSet}
-          />
+          <ImageFaders />
         </div>
       </div>
       <HeroTitle />
@@ -31,9 +28,4 @@ export const HeroContentSmall = ({ firstImageSet, secondImageSet }) => {
       </div>
     </>
   );
-};
-
-HeroContentSmall.propTypes = {
-  firstImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
-  secondImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

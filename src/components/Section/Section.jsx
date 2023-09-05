@@ -1,5 +1,9 @@
+// Modules
 import PropTypes from "prop-types";
+
+// Styles
 import s from "./Section.module.scss";
+
 export const Section = ({ id, children }) => {
   return (
     <>

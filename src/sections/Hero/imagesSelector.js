@@ -22,8 +22,11 @@ import {
   tablet02x2,
 } from "../../assets/images/hero/tablet/index.js";
 
-const LARGE_SCREEN_BREAKPOINT = 1440;
-const SMALL_SCREEN_BREAKPOINT = 420;
+// Constants/Utilities/Styles
+import {
+  LARGE_SCREEN_BREAKPOINT,
+  SMALL_SCREEN_BREAKPOINT,
+} from "../../styles/breakpoints.js";
 
 export const getImageSet = (windowWidth, isRetina) => {
   if (windowWidth >= LARGE_SCREEN_BREAKPOINT) {

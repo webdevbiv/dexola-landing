@@ -1,13 +1,12 @@
-//Components
-import PropTypes from "prop-types";
+// Components
 import { HeroTitle } from "./HeroTitle";
 import { ImageFaders } from "./ImageFaders";
 import { HeroText } from "./HeroText";
 
-//Styles
+// Constants/Utilities/Styles
 import s from "./Hero.module.scss";
 
-export const HeroContentLarge = ({ firstImageSet, secondImageSet }) => {
+export const HeroContentLarge = () => {
   return (
     <>
       <div className={s.border}>
@@ -15,10 +14,7 @@ export const HeroContentLarge = ({ firstImageSet, secondImageSet }) => {
           <div className={s.wrapper}>
             <HeroText />
             <div className={s.collectionImages}>
-              <ImageFaders
-                firstImageSet={firstImageSet}
-                secondImageSet={secondImageSet}
-              />
+              <ImageFaders />
             </div>
           </div>
         </div>
@@ -26,9 +22,4 @@ export const HeroContentLarge = ({ firstImageSet, secondImageSet }) => {
       <HeroTitle />
     </>
   );
-};
-
-HeroContentLarge.propTypes = {
-  firstImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
-  secondImageSet: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

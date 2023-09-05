@@ -1,5 +1,9 @@
-import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+
+// Modules
+import PropTypes from "prop-types";
+
+// Styles
 import s from "./ImageFader.module.scss";
 
 export const ImageFader = ({ images, delay }) => {

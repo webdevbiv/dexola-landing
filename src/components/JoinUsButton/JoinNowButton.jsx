@@ -1,5 +1,9 @@
+// Assets
 import arrow from "../../assets/images/icons/button-arrow.svg";
+
+// Styles
 import s from "./JoinNowButton.module.scss";
+
 export const JoinNowButton = () => {
   const handleClick = () => {
     window.location.hash = "#join-us";

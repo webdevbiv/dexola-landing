@@ -1,5 +1,9 @@
+// Modules
 import PropTypes from "prop-types";
+
+// Styles
 import s from "./Title.module.scss";
+
 export const Title = ({ text, number }) => {
   return (
     <div className={s.container}>
