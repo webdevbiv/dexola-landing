@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import s from "./TopNFTs.module.scss";
 
-export const renderWebTable = ({ data }) => (
+export const WebTable = ({ data }) => (
   <table
     className={s.table}
     cellSpacing='0'
@@ -38,3 +39,16 @@ export const renderWebTable = ({ data }) => (
     </tbody>
   </table>
 );
+
+WebTable.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      nftName: PropTypes.string.isRequired,
+      rarityLevel: PropTypes.string.isRequired,
+      totalGames: PropTypes.number.isRequired,
+      gamesWon: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

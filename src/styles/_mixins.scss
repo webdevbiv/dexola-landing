@@ -93,6 +93,9 @@
 @mixin button($bg-color: $button-bg-color, $text-color: $button-text-color) {
   font-family: $font-roboto-500;
   font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  line-height: 24px;
 
   outline: none;
   border: none;

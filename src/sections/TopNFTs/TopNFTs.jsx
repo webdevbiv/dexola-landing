@@ -1,8 +1,8 @@
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 import { Section } from "../../components/Section/Section";
 import { Title } from "../../components/Title/Title";
-import { renderWebTable as WebTable } from "./renderWebTable";
-import { renderMobileTable as MobileTable } from "./renderMobileTable";
+import { WebTable } from "./WebTable";
+import { MobileTable } from "./MobileTable";
 import { DataTopNfts as data } from "./data";
 import s from "./TopNFTs.module.scss";
 
