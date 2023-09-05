@@ -5,3 +5,4 @@ export { Hero } from "./Hero/Hero";
 export { JoinUs } from "./JoinUs/JoinUs";
 export { Main } from "./Main/Main";
 export { TopNFTs } from "./TopNFTs/TopNFTs";
+export { Animation } from "./Animation/Animation";

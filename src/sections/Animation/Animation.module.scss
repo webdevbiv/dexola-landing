@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text1 {
+  font-family: $font-swis-721-bt;
+  font-size: 24px;
+  line-height: 33.6px;
+  text-transform: uppercase;
+}
+
+.text2 {
+  font-family: $font-swis-721-md-bt;
+  font-size: 64px;
+  line-height: 80.3px;
+  text-transform: uppercase;
+}
