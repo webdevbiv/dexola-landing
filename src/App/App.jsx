@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Features,
   TopNFTs,
@@ -19,6 +21,7 @@ function App() {
         <JoinUs />
       </Main>
       <Footer />
+      <ToastContainer />
     </>
   );
 }

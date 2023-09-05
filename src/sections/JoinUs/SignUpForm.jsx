@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { toast } from "react-toastify";
 
 import { TextInputField } from "./TextInputField";
 import { EyeIcon } from "./EyeIcon";
@@ -30,7 +31,23 @@ export const SignUpForm = () => {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          console.log(values);
+          toast.success(
+            <>
+              Registration success!
+              <br />
+              User with e-mail: {values.email} was registered!
+            </>,
+            {
+              position: "top-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: false,
+              progress: undefined,
+              theme: "dark",
+            }
+          );
         }}
       >
         {({ setFieldValue, setFieldTouched, touched, errors }) => (
