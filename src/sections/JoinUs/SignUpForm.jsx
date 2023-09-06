@@ -16,6 +16,7 @@ import "./JoinUS.scss";
 export const SignUpForm = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
   const [isShowPasswordConfirm, setIsShowPasswordConfirm] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const toggleShowPassword = () => setIsShowPassword((prev) => !prev);
   const toggleShowPasswordConfirm = () =>
@@ -49,6 +50,7 @@ export const SignUpForm = () => {
               theme: "dark",
             }
           );
+          setPhoneNumber("");
           resetForm();
         }}
       >
@@ -66,8 +68,12 @@ export const SignUpForm = () => {
               <PhoneInput
                 defaultCountry='UA'
                 international
+                value={phoneNumber}
                 countries={["UA", "US", "GB", "CA", "DE"]}
-                onChange={(value) => setFieldValue("phoneNumber", value)}
+                onChange={(value) => {
+                  setFieldValue("phoneNumber", value);
+                  setPhoneNumber(value);
+                }}
                 onBlur={() => setFieldTouched("phoneNumber", true)}
                 placeholder='+38(0__) ___ __ __'
                 className={
