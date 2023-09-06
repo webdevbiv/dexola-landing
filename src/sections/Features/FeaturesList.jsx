@@ -10,6 +10,13 @@ export const FeaturesList = () => {
   const windowWidth = useWindowWidth();
   const isRetina = window.devicePixelRatio > 1;
   const cards = getCards(windowWidth, isRetina);
+  const handleClick = () => {
+    window.location.hash = "#join-us";
+
+    setTimeout(() => {
+      history.replaceState(null, null, " ");
+    }, 0);
+  };
 
   return (
     <ul className={s.cardsList}>
@@ -35,19 +42,17 @@ export const FeaturesList = () => {
             </div>
           </div>
           <div className={s.wrapperButton}>
-            <a
-              href={card.link}
-              className={s.buttonLink}
+            <button
+              className={s.button}
+              onClick={handleClick}
             >
-              <button className={s.button}>
-                <img
-                  src={arrow}
-                  alt='join-now'
-                  className={s.arrow}
-                />
-                <span>discover now</span>
-              </button>
-            </a>
+              <img
+                src={arrow}
+                alt='join-now'
+                className={s.arrow}
+              />
+              <span>discover now</span>
+            </button>
           </div>
         </li>
       ))}
