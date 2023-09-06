@@ -30,7 +30,7 @@ export const SignUpForm = () => {
           confirmPassword: "",
         }}
         validationSchema={SignupSchema}
-        onSubmit={(values) => {
+        onSubmit={(values, { resetForm }) => {
           console.log(values);
           toast.success(
             <>
@@ -49,6 +49,7 @@ export const SignUpForm = () => {
               theme: "dark",
             }
           );
+          resetForm();
         }}
       >
         {({ setFieldValue, setFieldTouched, touched, errors }) => (
